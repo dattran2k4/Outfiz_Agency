@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+@import 'tailwindcss';
+
+@theme {
+    --color-brand: #FAAF3A;
+    --color-brand-dark: #E59A2A;
+    --background-brand-gradient: linear-gradient(90deg, #FF742E 0%, #FFAD2C 97.12%);
+}
+
+@layer base {
+    body {
+      font-family: 'Montserrat', sans-serif;
+    }
+}
