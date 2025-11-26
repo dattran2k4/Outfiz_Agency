@@ -5,7 +5,8 @@
 @theme {
     --color-brand: #FAAF3A;
     --color-brand-dark: #E59A2A;
-    --background-brand-gradient: linear-gradient(90deg, #FF742E 0%, #FFAD2C 97.12%);
+    --background-image-gradient-main: linear-gradient(90deg, #FF742E 0%, #FFAD2C 97.12%);
+    --background-image-gradient-highlight: linear-gradient(90deg, #FF6C0A 0%, #FFF203 100%);
 }
 
 @layer base {
@@ -13,3 +14,4 @@
       font-family: 'Montserrat', sans-serif;
     }
 }
+

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Button from './Button';
 import { VietnamFlagIcon, PhoneIcon, ChevronDownIcon } from './Icons';
-import LogoIcon from './Logo'
+import LogoIcon from './Logo';
 const Header = () => {
     // Dữ liệu menu để dễ quản lý
     const navItems = [
@@ -14,14 +14,13 @@ const Header = () => {
   
     return (
       // Container ngoài cùng giả lập nền mờ của trang web (để thấy rõ header nổi)
-      <div className="w-full bg-gray-50 p-6 flex justify-center">
-        
+        <>
         {/* Header chính */}
-        <header className="w-full max-w-[1200px] bg-white rounded-[15px] shadow-lg px-10 py-3 flex items-center justify-between">
+        <header className="w-full mx-auto max-w-[1240px] bg-white rounded-2xl shadow-lg px-10 py-5 flex items-center justify-between">
           
             <a href="/" className="cursor-pointer flex items-center">
                 {/* Component Logo của bạn */}
-                <LogoIcon className="h-10 w-auto" /> 
+                <LogoIcon className="h-11 w-auto" /> 
             </a>
 
           {/* 2. Navigation Links */}
@@ -38,7 +37,7 @@ const Header = () => {
               {/* Nếu có Dropdown thì hiện Arrow Down Icon */}
               {/* Dùng currentColor để khi hover text đổi màu cam, icon cũng đổi theo */}
               {item.hasDropdown && (
-                <ChevronDownIcon className="w-[14px] h-[14px]" color="currentColor" />
+                <ChevronDownIcon className="w-3.5 h-3.5" color="currentColor" />
               )}
             </a>
           ))}
@@ -49,17 +48,17 @@ const Header = () => {
           
           {/* Button Tiếng Việt */}
           <Button variant="outline">
-            <VietnamFlagIcon className="w-5 h-5" />
+            <VietnamFlagIcon />
             Tiếng Việt
             {/* Arrow Icon cho nút ngôn ngữ: Màu cam (brand) */}
-            <ChevronDownIcon className="w-[14px] h-[14px]" color="#FAAF3A"/>
+            <ChevronDownIcon  color="#FAAF3A"/>
           </Button>
 
           {/* Button Liên hệ */}
           <Button 
             variant="primary" 
             // Truyền Icon Phone vào, set màu trắng
-            icon={<PhoneIcon className="w-[20px] h-[20px]" color="white" />}
+            icon={<PhoneIcon color="white" />}
           >
             Liên hệ ngay
           </Button>
@@ -67,7 +66,7 @@ const Header = () => {
         </div>
   
         </header>
-      </div>
+        </>
     );
   };
   

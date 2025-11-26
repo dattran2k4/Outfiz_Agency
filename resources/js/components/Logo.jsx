@@ -1,7 +1,9 @@
+import Logo from '../images/logo.svg';
+
 const LogoIcon = ({ className }) => {
     return (
         <img 
-          src="/images/logo.svg" // Đường dẫn tính từ thư mục public
+          src={Logo} // Đường dẫn tính từ thư mục public
           alt="Outfiz Agency Logo" 
           className={className} 
         //   style={{ objectFit: 'contain' }}
