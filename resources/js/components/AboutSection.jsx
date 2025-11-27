@@ -1,16 +1,21 @@
 import AboutUsImg from '../images/about-us-img.png';
+import Button from './Button';
+import {ArrowRightIcon} from '../components/Icons';
 
 const AboutSection = () => {
    return (
-     <div class="relative w-full max-w-[1240px] mx-auto h-[500px] md:h-[600px] group">
-  
-  <img 
-    src={AboutUsImg} 
-    alt="Background Outfiz" 
-    class="absolute inset-0 w-full h-full object-contain z-0 bg-transparent"
-  />
+     <div class="relative w-full max-w-[1240px] mx-auto h-[500px] md:h-[565px] group">
+       
+       {/* Image */}
+      <img 
+        src={AboutUsImg} 
+        alt="Background Outfiz" 
+        class="absolute inset-0 w-full h-full object-contain z-0 bg-transparent"
+      />
 
-  <div class="absolute z-10 right-0 md:right-[10%] top-[15%] w-full md:max-w-[450px] px-6 md:px-0">
+
+    {/* Content */}
+  <div class="absolute z-10 right-0 md:right-[10%] top-[12%] w-full md:max-w-[450px] px-6 md:px-0">
     
     <div class="flex flex-col space-y-4">
       <h2 className="text-center text-[40px] font-bold text-brand">Về chúng tôi</h2>
@@ -24,11 +29,11 @@ const AboutSection = () => {
       </p>
 
       <div>
-        <a href="#" class="inline-flex items-center px-6 py-2 border-2 border-brand text-brand font-semibold rounded-full hover:bg-brand hover:text-white transition-all duration-300">
-          Tìm hiểu thêm
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-          </svg>
+        <a href="#">
+          <Button variant="outline" className="w-[186px]">
+            Tìm hiểu thêm
+            <ArrowRightIcon />
+          </Button>
         </a>
       </div>
 

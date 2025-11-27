@@ -21,8 +21,8 @@ const HireSection = () => {
             <div className="mb-6">
                {/* Decor */}
                <div className="flex gap-1 mb-2">
-                  <span className="w-6 h-1 bg-amber-500 rounded-full"></span>
-                  <span className="w-3 h-1 bg-amber-500 rounded-full"></span>
+                <span className="w-5 h-1.5 bg-gradient-to-r from-[#FF782E] to-[#FAAF3A] rounded-full"></span>
+                <span className="w-10 h-1.5 bg-gradient-to-r from-[#FF782E] to-[#FAAF3A] rounded-full"></span>
                 </div>
                 {/* Title */}
                 <h2 className="text-4xl font-bold text-brand">

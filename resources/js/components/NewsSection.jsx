@@ -14,15 +14,15 @@ const NewsSection = () => {
         
         {/* --- Header --- */}
         <div className="text-center mb-10">
-          <h2 className="text-3xl md:text-4xl font-bold text-amber-500 mb-3 relative inline-block">
+          <h2 className="text-3xl md:text-4xl font-bold text-amber-500 mb-3 relative inline-block pb-2">
             Tin Tức
              {/* Decoration */}
             <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 flex gap-1">
-                <span className="w-8 h-1 bg-amber-500 rounded-full"></span>
-                <span className="w-4 h-1 bg-amber-500 rounded-full"></span>
+              <span className="w-5 h-1.5 bg-gradient-to-r from-[#FF782E] to-[#FAAF3A] rounded-full"></span>
+              <span className="w-10 h-1.5 bg-gradient-to-r from-[#FF782E] to-[#FAAF3A] rounded-full"></span>
             </div>
           </h2>
-          <p className="text-gray-600 mt-4 max-w-3xl mx-auto">
+          <p className="text-[#404040] text-lg mt-4 mx-auto">
             Nắm bắt những kiến thức marketing mới nhất, xu hướng thương hiệu, mẹo tối ưu quảng cáo và case study thực tế từ Outfiz Agency.
           </p>
         </div>

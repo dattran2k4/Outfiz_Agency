@@ -3,6 +3,7 @@ import NavButton from '../components/NavButton';
 import {ArrowLeft, ArrowRight, StartIcon} from '../components/Icons';
 import BackGroundFeedBack from '../images/feedback/background-feedback.png';
 import Background from '../images/feedback/background.png';
+import BackgroundAvatar from '../images/feedback/background-avatar.png';
 const FeedbackSection = () => {
     return (
         <section className="py-20 relative">
@@ -24,19 +25,19 @@ const FeedbackSection = () => {
         </div>
 
         {/* --- Phần 1: Partners Carousel --- */}
-        <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 mb-20 relative">
-          <div className="flex items-center justify-between">
+        <div className="bg-white rounded-2xl shadow-sm border border-[#D4D4D4] p-6 mb-20 relative">
+          <div className="flex items-center justify-between h-[169px]">
             {/* Nút Prev */}
             <NavButton><ArrowLeft /></NavButton>
 
             {/* List Logo - Cần dùng Grid hoặc Flex */}
-            <div className="flex-1 flex justify-around items-center gap-8 overflow-hidden px-8">
+            <div className="flex-1 flex justify-around items-center overflow-hidden">
               {partners.map((p) => (
                 <img 
                   key={p.id} 
                   src={p.logo} 
                   alt={p.name} 
-                  className="h-12 object-contain opacity-80 hover:opacity-100 transition" 
+                  className="w-[205px] h-[73px] object-cover" 
                 />
               ))}
             </div>
@@ -47,46 +48,58 @@ const FeedbackSection = () => {
         </div>
 
 
-        {/* --- Phần 2: Feedback Cards (Quan trọng) --- */}
+        {/* --- Phần 2: Feedback Cards --- */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 pt-10">
           {feedbacks.map((item) => (
             <div key={item.id} className="relative group">
               
-              {/* 1. Lớp Background chứa ảnh bạn xuất ra */}
+              {/* 1. Background  */}
               <div className="absolute inset-0 z-0">
                 <img 
                   src={BackGroundFeedBack} 
                   alt="bg-card" 
-                  className="w-full h-full object-fill drop-shadow-md" // Dùng object-fill để ảnh co giãn theo khung
+                  className="w-full h-full object-fill drop-shadow-md"
                 />
               </div>
 
-              {/* 2. Lớp Nội dung đè lên trên */}
+              {/* 2. Content */}
               <div className="relative z-10 p-8 h-full flex flex-col">
                 
-                {/* Header Card: Avatar + Info */}
+                {/* Header Card: Avatar + Info + Start */}
                 <div className="flex items-center gap-4 mb-4">
-                  {/* Avatar - Dùng margin âm để đẩy nó bay lên trên border ảnh nền */}
-                  <div className="-mt-16 bg-white p-1 rounded-full shadow-md"> 
-                     <img 
-                      src={item.avatar} 
-                      alt={item.name} 
-                      className="w-16 h-16 rounded-full object-cover border-2 border-amber-400"
-                    />
+                  {/* Khối Avatar với nền vàng */}
+                  <div className="relative w-20 h-20 shrink-0">
+                    <div className="relative shrink-0 w-[83px] h-[85px]"> 
+                      {/* Avatar - BG */}
+                      <img 
+                        src={BackgroundAvatar} 
+                        alt="background shape"
+                        className="absolute inset-0 w-full h-full object-contain z-0"
+                      />
+                      {/* Avatar */}
+                      <img 
+                        src={item.avatar} 
+                        alt={item.name} 
+                        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[64px] h-[64px] rounded-full object-cover z-10 shadow-sm"
+                      />
+                    </div>
                   </div>
                   
-                  {/* Tên & Role */}
-                  <div className="mt-2"> {/* Thêm margin top để bù lại do avatar bị đẩy lên */}
-                    <h4 className="font-bold text-gray-800 text-lg">{item.name}</h4>
-                    <span className="text-sm text-gray-500">{item.role}</span>
+                  {/* Info & Starts */}
+                <div className="flex flex-col pt-1">
+                  <h4 className="font-bold text-gray-800 text-xl leading-tight">{item.name}</h4>
+                  <span className="text-gray-500 text-sm mb-2">{item.role}</span>
+                  
+                  {/* Rating Stars */}
+                  <div className="flex gap-1">
+                    {[...Array(5)].map((_, i) => (
+                      <StartIcon 
+                        key={i} 
+                        className={`w-5 h-5 ${i < item.rating ? "text-[#FAAF3A]" : "text-[#E5E5E5]"}`} 
+                      />
+                    ))}
                   </div>
                 </div>
-
-                {/* Rating Stars */}
-                <div className="flex gap-1 text-amber-400 mb-4 pl-2">
-                  {[...Array(5)].map((_, i) => (
-                    <StartIcon key={i} className={`w-5 h-5 ${i < item.rating ? "text-amber-400" : "text-gray-300"}`} />
-                  ))}
                 </div>
 
                 {/* Nội dung text */}

@@ -13,16 +13,16 @@ const ProjectSection = () => {
                     <h2 className="text-3xl md:text-4xl font-bold text-brand mb-6">
                         Dự Án Nổi Bật
                     </h2>
-                    <p className="text-[#404040] text-[18px] leading-[4/3]">
+                    <p className="text-[#404040] text-lg leading-[4/3]">
                         OUTFIZ đã đồng hành cùng hơn <strong>30+ thương hiệu</strong> trong đa dạng lĩnh vực như F&B, thời trang, giáo dục, du lịch, làm đẹp,...
                     </p>
                 </div>
 
                 {/* --- Phần Grid Cards & Navigation --- */}
-                <div className="flex items-center justify-between relative">
+                <div className="flex items-center justify-between gap-6">
 
                     {/* Previous Button */}
-                    <NavButton className="hidden md:flex items-center justify-center w-10 h-10 rounded-full border border-#525252 transition mr-4 cursor-pointer">
+                    <NavButton>
                         <ArrowLeft />
                     </NavButton>
 
@@ -42,18 +42,18 @@ const ProjectSection = () => {
 
                                 {/* Tag */}
                                 <div className="mb-4">
-                                    <span className="px-4 py-2 rounded-full border border-gray-300 text-gray-500 text-sm bg-white">
+                                    <span className="px-4 py-2 rounded-full border border-[#D4D4D4] text-[#737373] text-sm bg-white">
                                         {project.tag}
                                     </span>
                                 </div>
 
                                 {/* Title */}
-                                <h3 className="text-2xl font-bold text-gray-800 mb-2">
+                                <h3 className="text-2xl font-bold mb-2">
                                     {project.title}
                                 </h3>
 
                                 {/* Description */}
-                                <p className="text-gray-500 text-center text-sm mb-6 line-clamp-3 px-2">
+                                <p className="text-[#404040] text-center text-sm mb-3 line-clamp-2">
                                     {project.description}
                                 </p>
 
@@ -70,7 +70,7 @@ const ProjectSection = () => {
                     </div>
 
                     {/* Next Button */}
-                    <NavButton className="hidden md:flex items-center justify-center w-10 h-10 rounded-full border border-[#525252]-[200px] hover:bg-gray-100 transition ml-4 cursor-pointer">
+                    <NavButton >
                         <ArrowRight />
                     </NavButton>
                 </div>

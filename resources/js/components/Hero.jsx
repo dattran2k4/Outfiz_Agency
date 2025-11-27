@@ -1,16 +1,16 @@
 import React from 'react';
-import Button from './Button'; // Tái sử dụng nút xịn đã làm
-import { CallingIcon, ZaloIcon, MessengerIcon } from './Icons'; // Icon điện thoại
+import Button from './Button';
+import { CallingIcon, ZaloIcon, MessengerIcon } from './Icons';
 import HeroImage from '../images/hero-img.png'
 
 const ActionButton = ({ icon, href }) => {
     return (
       <a 
         href={href}
-        className="relative group flex items-center justify-center w-[50px] h-[50px] bg-[#F04C4C] rounded-full text-white shadow-lg transition-all hover:scale-110"
+        className="relative group flex items-center justify-center w-10 h-10 bg-[#FF4D4D] rounded-full text-white shadow-lg transition-all hover:scale-110"
       >
         {/* Vòng tròn Ring Effect khi Hover */}
-        <span className="absolute inset-0 rounded-full border-2 border-[#F04C4C] opacity-0 scale-100 transition-all duration-300 group-hover:scale-125 group-hover:opacity-60"></span>
+        <span className="absolute inset-0 rounded-full border-2 border-[#FF4D4D] opacity-0 scale-100 transition-all duration-300 group-hover:scale-125 group-hover:opacity-60"></span>
         
         {/* Icon */}
         <div className="relative z-10">
@@ -26,7 +26,7 @@ const Hero = () => {
       
       <div className="w-full max-w-[1240px] mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         
-        {/* === CỘT TRÁI: TEXT === */}
+        {/* === Left Col: TEXT === */}
         <div className="flex flex-col items-center lg:items-start text-center lg:text-left z-10 max-h-[289px]">
             
             {/* Title */}
@@ -38,13 +38,12 @@ const Hero = () => {
             </h2>
 
             {/* Description */}
-            <p className="font-semibold text-[16px] leading-[22px] tracking-normal text-[#525252] mb-8 max-w-[540px]">
+            <p className="font-semibold leading-5 tracking-normal text-[#525252] mb-8 max-w-[540px]">
                 Chuyên cung cấp các dịch vụ marketing tổng thể, giúp doanh nghiệp xây dựng thương hiệu, thu hút khách hàng và tăng trưởng bền vững.
             </p>
 
             {/* Button */}
             <div className="flex flex-col sm:flex-row items-center gap-4">
-                {/* Nút Gradient: Đăng ký tư vấn */}
                 <Button variant="primary" className="w-[211px]!">
                     Đăng ký tư vấn ngay
                 </Button>
@@ -61,7 +60,7 @@ const Hero = () => {
                 className="max-w-[633px] h-auto object-contain drop-shadow-2xl animate-fade-in-up"
             />
 
-            <div className="absolute -right-11 top-1/2 flex flex-col gap-4">
+            <div className="absolute -right-11 top-2/3 flex flex-col gap-4">
                 
                 {/* Nút Phone */}
                 <ActionButton 

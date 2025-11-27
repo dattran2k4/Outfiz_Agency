@@ -57,8 +57,8 @@ const FeatureSection = () => {
 
             {/* Trang trí gạch đầu dòng */}
             <div className="flex gap-2 mb-4">
-              <span className="w-8 h-1.5 bg-brand rounded-full"></span>
-              <span className="w-4 h-1.5 bg-brand/60 rounded-full"></span>
+              <span className="w-5 h-1.5 bg-gradient-to-r from-[#FF782E] to-[#FAAF3A] rounded-full"></span>
+              <span className="w-10 h-1.5 bg-gradient-to-r from-[#FF782E] to-[#FAAF3A] rounded-full"></span>
             </div>
 
             <h2 className="text-3xl md:text-4xl font-bold text-brand mb-2 leading-tight">
@@ -66,7 +66,7 @@ const FeatureSection = () => {
               Outfiz Agency?
             </h2>
 
-            <p className="text-gray-600 leading-relaxed mt-6 mb-8 text-justify md:text-left">
+            <p className="text-[#404040] leading-[4/3] mt-6 mb-8 text-justify md:text-left">
               Không chỉ là một đơn vị thực thi marketing, Outfiz Agency là đối tác chiến lược giúp doanh nghiệp bạn phát triển thương hiệu bài bản, tối ưu hiệu suất và tạo ra giá trị thực từ ngân sách đầu tư.
             </p>
 
@@ -96,11 +96,11 @@ const FeatureCard = ({ item }) => {
           />
         </div>
 
-        <h3 className="text-lg font-bold text-gray-800 mb-3 px-2 group-hover:text-brand transition-colors">
+        <h3 className="text-2xl font-bold text[#404040] mb-3 px-2 group-hover:text-brand transition-colors">
           {item.title}
         </h3>
 
-        <p className="text-sm text-gray-500 leading-relaxed">
+        <p className="text-[#404040] leading-snug">
           {item.description}
         </p>
       </article>

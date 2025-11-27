@@ -14,11 +14,11 @@ const ServiceSection = () => {
             <h2 className="text-4xl font-bold text-brand mb-2">Dịch Vụ</h2>
 
             <div className="flex gap-2 mb-6">
-              <span className="w-8 h-1.5 bg-brand rounded-full"></span>
-              <span className="w-4 h-1.5 bg-brand/60 rounded-full"></span>
+              <span className="w-5 h-1.5 bg-gradient-to-r from-[#FF782E] to-[#FAAF3A] rounded-full"></span>
+              <span className="w-10 h-1.5 bg-gradient-to-r from-[#FF782E] to-[#FAAF3A] rounded-full"></span>
             </div>
 
-            <div className="text-gray-600 leading-relaxed space-y-4 text-justify md:text-left">
+            <div className="text-[#404040] leading-[4/3] space-y-4 text-justify md:text-left">
               <p>
                 Tại OUTFIZ, chúng tôi cung cấp dịch vụ Digital Marketing toàn diện giúp doanh nghiệp xây dựng thương hiệu bài bản, tiếp cận đúng khách hàng, tối ưu hiệu quả và chi phí.
               </p>
