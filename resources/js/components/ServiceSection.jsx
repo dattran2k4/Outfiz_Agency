@@ -5,7 +5,7 @@ import {ArrowRightIcon} from '../components/Icons';
 const ServiceSection = () => {
   return (
     <section className="py-20 bg-transparent">
-      <div className="container mx-auto px-4">
+      <div className="max-w-[1240px] mx-auto px-4">
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-5">
 
@@ -14,8 +14,8 @@ const ServiceSection = () => {
             <h2 className="text-4xl font-bold text-brand mb-2">Dịch Vụ</h2>
 
             <div className="flex gap-2 mb-6">
-              <span className="w-5 h-1.5 bg-gradient-to-r from-[#FF782E] to-[#FAAF3A] rounded-full"></span>
-              <span className="w-10 h-1.5 bg-gradient-to-r from-[#FF782E] to-[#FAAF3A] rounded-full"></span>
+              <span className="w-5 h-1.5 bg-linear-to-r from-[#FF782E] to-brand rounded-full"></span>
+              <span className="w-10 h-1.5 bg-linear-to-r from-[#FF782E] to-brand rounded-full"></span>
             </div>
 
             <div className="text-[#404040] leading-[4/3] space-y-4 text-justify md:text-left">
@@ -46,7 +46,7 @@ const ServiceCard = ({data}) => {
             {/* Image */}
             <div className="w150 h100 flex items-center justify-center">
                 <img src={data.image} alt={data.title}
-                    className="w-full h-full object-contain"
+                    className="w-full h-full object-cover"
                 />
                 
             </div>
@@ -61,7 +61,7 @@ const ServiceCard = ({data}) => {
             {/* Button */}
             <div className="mt-7">
                 <a href="#!" className="mx-auto inline-flex items-center justify-center">
-                <Button className="" variant="outline">
+                <Button className="h-[42px]! w-[167px]!" variant="outline">
                      Xem thêm
                      <ArrowRightIcon />
                 </Button>

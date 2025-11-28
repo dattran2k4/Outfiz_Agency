@@ -1,8 +1,6 @@
 import React from 'react';
 import Header from '../components/Header';
 import Hero from '../components/Hero';
-import Feature from '../components/FeatureSection';
-import Footer from '../components/Footer';
 import Background from '../images/background.png'
 import AboutSection from '../components/AboutSection';
 import ServiceSection from '../components/ServiceSection';
@@ -12,6 +10,7 @@ import FeedbackSection from '../components/FeedbackSection';
 import RegisterSection from '../components/RegisterSection';
 import NewsSection from '../components/NewsSection';
 import HireSection from '../components/HireSection';
+import Footer from '../components/Footer';
 
 export default function HomePage() {
     return (
@@ -34,6 +33,7 @@ export default function HomePage() {
             <RegisterSection />
             <NewsSection />
             <HireSection />
+            <Footer />
         </div>
             
         </>

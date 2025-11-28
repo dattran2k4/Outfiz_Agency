@@ -15,7 +15,7 @@ export const feedbacks = [
     name: "Jenny Wilson",
     role: "Outfiz.vn",
     avatar: DefaultAvatarImg, // Avatar mẫu
-    rating: 5,
+    rating: 4,
     content: "Outfiz Agency làm việc chuyên nghiệp, phản hồi nhanh và sáng tạo. Chiến dịch giúp chúng tôi tăng trưởng doanh số rõ rệt chỉ sau vài tuần."
   },
   {
@@ -23,7 +23,7 @@ export const feedbacks = [
     name: "Esther Howard",
     role: "Ohtez.com",
     avatar: DefaultAvatarImg,
-    rating: 5,
+    rating: 4,
     content: "Outfiz Agency làm việc chuyên nghiệp, phản hồi nhanh và sáng tạo. Chiến dịch giúp chúng tôi tăng trưởng doanh số rõ rệt chỉ sau vài tuần."
   },
   {

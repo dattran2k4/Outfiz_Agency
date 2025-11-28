@@ -6,8 +6,8 @@ export const newsCategories = [
   { id: 'social', name: 'Social' },
   { id: 'content', name: 'Content' },
   { id: 'uiux', name: 'UI/UX Design' },
-  { id: 'branding', name: 'Branding' },
-  { id: 'tech', name: 'Technology' },
+  { id: 'branding', name: 'Marketing' },
+  { id: 'tech', name: 'Social' },
 ];
 
 export const newsArticles = [

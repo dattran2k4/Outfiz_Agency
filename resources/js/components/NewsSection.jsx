@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import {newsCategories, newsArticles} from '../data/news';
-import Button from '../components/Button';
 import {ArrowLeft, ArrowRight, ArrowRightIcon} from '../components/Icons';
 import NavButton from '../components/NavButton';
 
@@ -10,41 +9,42 @@ const NewsSection = () => {
 
   return (
     <section className="py-20 bg-white">
-      <div className="container mx-auto px-4 max-w-6xl">
+      <div className="max-w-[1240px] mx-auto">
         
         {/* --- Header --- */}
         <div className="text-center mb-10">
-          <h2 className="text-3xl md:text-4xl font-bold text-amber-500 mb-3 relative inline-block pb-2">
+          <h2 className="text-3xl md:text-4xl font-medium text-amber-500 relative inline-block mb-6 pb-3">
             Tin Tức
              {/* Decoration */}
             <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 flex gap-1">
-              <span className="w-5 h-1.5 bg-gradient-to-r from-[#FF782E] to-[#FAAF3A] rounded-full"></span>
-              <span className="w-10 h-1.5 bg-gradient-to-r from-[#FF782E] to-[#FAAF3A] rounded-full"></span>
+              <span className="w-5 h-1.5 bg-linear-to-r from-[#FF782E] to-brand rounded-full"></span>
+              <span className="w-10 h-1.5 bg-linear-to-r from-[#FF782E] to-brand rounded-full"></span>
             </div>
           </h2>
-          <p className="text-[#404040] text-lg mt-4 mx-auto">
+          <p className="text-[#404040] font-medium text-lg mt-4 mx-auto">
             Nắm bắt những kiến thức marketing mới nhất, xu hướng thương hiệu, mẹo tối ưu quảng cáo và case study thực tế từ Outfiz Agency.
           </p>
         </div>
 
         {/* --- Filter Menu Bar --- */}
-        <div className="bg-gray-50 p-2 rounded-xl flex items-center gap-2 mb-12 max-w-4xl mx-auto">
+        <div className="bg-[#F5F5F5] py-3 px-6 rounded-[10px] flex items-center gap-5 mb-12 mx-auto">
           {/* Pre Button */}
           <div className="hidden md:block">
-             <NavButton className="bg-white border-none shadow-sm w-8 h-8"><ArrowLeft className="w-4 h-4" /></NavButton>
+             <NavButton className="bg-white border-none w-9 h-9"><ArrowLeft className="w-3 h-3" /></NavButton>
           </div>
 
           {/* List Categories */}
-          <div className="flex-1 flex gap-3 overflow-x-auto scrollbar-hide px-2 py-1 items-center justify-start md:justify-center">
+          <div className="flex-1 flex gap-5 overflow-x-hidden items-center justify-start">
             {newsCategories.map((cat) => (
               <button
                 key={cat.id}
                 onClick={() => setActiveTab(cat.id)}
                 className={`
-                  whitespace-nowrap px-6 py-2 rounded-lg font-semibold text-sm transition-all border
+                  whitespace-nowrap px-8 rounded-[10px] font-semibold text-lg transition-all border md:h-14
+                  flex items-center justify-center  
                   ${activeTab === cat.id 
-                    ? 'bg-white text-amber-500 border-amber-500 shadow-sm' // Active Style
-                    : 'bg-transparent text-gray-500 border-transparent hover:bg-gray-200' // Inactive Style
+                    ? 'bg-white text-brand border-brand shadow-sm' // Active Style
+                    : 'text-[#737373] border-[#E9E9E9] bg-white' // Inactive Style
                   }
                 `}
               >
@@ -55,14 +55,14 @@ const NewsSection = () => {
 
           {/* Next Button */}
           <div className="hidden md:block">
-            <NavButton className="bg-white border-none shadow-sm w-8 h-8"><ArrowRight className="w-4 h-4" /></NavButton>
+            <NavButton className="bg-white border-none w-9 h-9"><ArrowRight className="w-3 h-3" /></NavButton>
           </div>
         </div>
 
         {/* List News */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {newsArticles.map((article) => (
-            <div key={article.id} className="group cursor-pointer">
+            <article key={article.id} className="group cursor-pointer p-6">
               
               {/* Image Card */}
               <div className="relative rounded-2xl overflow-hidden mb-5">
@@ -88,28 +88,28 @@ const NewsSection = () => {
               <div className="px-2">
                 {/* Category Tag */}
                 <div className="mb-3">
-                   <span className="inline-block px-3 py-1 border border-gray-200 rounded-full text-gray-500 text-xs uppercase font-medium">
+                   <span className="inline-flex justify-center items-center px-6 py-1 border border-[#D4D4D4] bg-[#F9F9F9] rounded-full text-gray-500 text-xs uppercase font-medium h-9">
                       {article.category}
                    </span>
                 </div>
 
                 {/* Title */}
-                <h3 className="text-xl font-bold text-gray-800 mb-3 line-clamp-2 group-hover:text-amber-500 transition">
+                <h3 className="text-[24px] font-semibold text-[#404040] mb-3 line-clamp-1 group-hover:text-amber-500 transition">
                   {article.title}
                 </h3>
 
                 {/* Excerpt */}
-                <p className="text-gray-500 text-sm leading-relaxed mb-4 line-clamp-3">
+                <p className="text-[#525252] text-lg leading-[4/3] mb-6 line-clamp-2">
                   {article.excerpt}
                 </p>
 
                 {/* Link */}
-                <a href={article.slug} className="text-amber-500 font-semibold text-sm hover:underline underline-offset-4 inline-flex items-center gap-1">
+                <a href={article.slug} className="text-brand font-semibold underline hover:underline underline-offset-4 inline-flex items-center gap-1">
                   Xem chi tiết
                 </a>
               </div>
 
-            </div>
+            </article>
           ))}
         </div>
 

@@ -6,33 +6,28 @@ import Button from '../components/Button';
 const RegisterSection = () => {
     return (
         <section className="py-16 bg-white overflow-hidden">
-            <div className="container mx-auto px-4">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+            <div className="max-w-[1240px] mx-auto">
+                <div className="flex gap-10 items-center">
 
                     {/* Left Col */}
-                    <div className="relative p-6 md:p-8 rounded-3xl overflow-hidden">
+                    <div className="relative p-8 md:p-8 rounded-[20px] h-[580px] w-[52.4%]">
 
-                        {/* Background image */}
-                        <div
-                            className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-                            style={{ backgroundImage: `url(${RegisterBg})` }}
-                        />
 
-                        {/* Overlay */}
-                        <div className="absolute inset-0 bg-white/30 backdrop-blur-sm"></div>
+                        <img src={RegisterBg} alt="Background" className="absolute rounded-[20px] w-full h-full inset-0 object-cover z-0" />
 
                         {/* Content */}
                         <div className="relative">
 
-                            <div className="mb-6">
-                                <h2 className="text-2xl font-bold text-brand mb-2">Đăng Ký Tư Vấn</h2>
+                            <div className="mb-[30px]">
+                                <h2 className="text-[40px] font-bold text-brand mb-3">Đăng Ký Tư Vấn</h2>
 
                                 <div className="flex gap-1">
-                                    <span className="w-5 h-1.5 bg-gradient-to-r from-[#FF782E] to-[#FAAF3A] rounded-full"></span>
-                                    <span className="w-10 h-1.5 bg-gradient-to-r from-[#FF782E] to-[#FAAF3A] rounded-full"></span>
+                                    <span className="w-5 h-1.5 bg-linear-to-r from-[#FF782E] to-brand rounded-full"></span>
+                                    <span className="w-10 h-1.5 bg-linear-to-r from-[#FF782E] to-brand rounded-full"></span>
                                 </div>
                             </div>
 
+                            {/* Form */}
                             <div className="bg-white rounded-2xl border border-brand px-4 py-6 shadow-lg">
                                 <form className="space-y-4">
                                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -44,7 +39,7 @@ const RegisterSection = () => {
                                             <input
                                                 type="text"
                                                 placeholder="Nhập họ và tên..."
-                                                className="w-full px-4 py-2 rounded-lg border border-gray-200 focus:border-amber-500 focus:ring-1 focus:ring-amber-500 outline-none transition text-sm"
+                                                className="w-full md:h-9 px-4 py-2 rounded-lg border border-gray-200 focus:border-amber-500 focus:ring-1 focus:ring-amber-500 outline-none transition text-sm"
                                             />
                                         </div>
 
@@ -56,7 +51,7 @@ const RegisterSection = () => {
                                             <input
                                                 type="text"
                                                 placeholder="Nhập tên công ty..."
-                                                className="w-full px-4 py-2 rounded-lg border border-gray-200 focus:border-amber-500 focus:ring-1 focus:ring-amber-500 outline-none transition text-sm"
+                                                className="w-full md:h-9 px-4 py-2 rounded-lg border border-gray-200 focus:border-amber-500 focus:ring-1 focus:ring-amber-500 outline-none transition text-sm"
                                             />
                                         </div>
                                     </div>
@@ -70,7 +65,7 @@ const RegisterSection = () => {
                                             <input
                                                 type="text"
                                                 placeholder="Nhập số điện thoại..."
-                                                className="w-full px-4 py-2 rounded-lg border border-gray-200 focus:border-amber-500 focus:ring-1 focus:ring-amber-500 outline-none transition text-sm"
+                                                className="w-full md:h-9 px-4 py-2 rounded-lg border border-gray-200 focus:border-amber-500 focus:ring-1 focus:ring-amber-500 outline-none transition text-sm"
                                             />
                                         </div>
 
@@ -82,7 +77,7 @@ const RegisterSection = () => {
                                             <input
                                                 type="email"
                                                 placeholder="Nhập email..."
-                                                className="w-full px-4 py-2 rounded-lg border border-gray-200 focus:border-amber-500 focus:ring-1 focus:ring-amber-500 outline-none transition text-sm"
+                                                className="w-full md:h-9 px-4 py-2 rounded-lg border border-gray-200 focus:border-amber-500 focus:ring-1 focus:ring-amber-500 outline-none transition text-sm"
                                             />
                                         </div>
                                     </div>
@@ -95,7 +90,7 @@ const RegisterSection = () => {
                                         <textarea
                                             rows="4"
                                             placeholder="Nhập nội dung..."
-                                            className="w-full px-4 py-2 rounded-lg border border-gray-200 focus:border-amber-500 focus:ring-1 focus:ring-amber-500 outline-none transition text-sm resize-none"
+                                            className="w-full md:h-[136px] px-4 py-2 rounded-lg border border-gray-200 focus:border-amber-500 focus:ring-1 focus:ring-amber-500 outline-none transition text-sm resize-none"
                                         ></textarea>
                                         {/* Characters Count */}
                                         <span className="absolute bottom-2 right-2 text-xs text-gray-400">0/250</span>
@@ -115,10 +110,10 @@ const RegisterSection = () => {
 
 
                     {/* Right Col */}
-                    <div className="flex flex-col items-center text-center">
+                    <div className="flex flex-1 flex-col items-center text-center">
 
                         {/* Avatar */}
-                        <div className="w-[238px] h-[237px] mb-6">
+                        <div className="w-[238px] h-[237px] mb-[26px]">
                             <img
                                 src={RegisterImg}
                                 alt="Tư vấn Outfiz"
@@ -127,12 +122,12 @@ const RegisterSection = () => {
                         </div>
 
                         {/* Title */}
-                        <h2 className="text-2xl md:text-3xl font-semibold text-[#404040] mb-4 flex items-center justify-center gap-2">
+                        <h2 className="text-2xl md:text-3xl font-semibold text-[#404040] mb-4 flex items-center justify-center gap-2 px-5">
                             🚀 Sẵn sàng tăng trưởng cùng <br/> OUTFIZ?
                         </h2>
 
                         {/* Description */}
-                        <p className="text-[#404040] text-lg mb-7 leading-snug max-w-md">
+                        <p className="text-[#404040] font-medium text-lg mb-7 leading-snug max-w-md">
                             Đừng để thương hiệu của bạn bị mờ nhạt giữa thị trường cạnh tranh khốc liệt! <br />
                             Đăng ký tư vấn ngay hôm nay để được đội ngũ chuyên gia của Outfiz Agency đồng hành xây dựng chiến lược marketing online tổng thể, tối ưu chi phí - tối đa hiệu quả.
                         </p>
@@ -140,7 +135,7 @@ const RegisterSection = () => {
                         {/* Hotline */}
                         <a
                             href="tel:0989899898"
-                            className=""
+                            className="font-semibold"
                         >
                             <Button variant="outline">
                                 {/* Phone */}

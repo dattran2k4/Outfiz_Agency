@@ -11,7 +11,7 @@ const FeatureSection = () => {
         <img
           src={FeatureBgImage}
           alt="Feature Background"
-          className="w-full h-full object-cover object-center"
+          className="w-full h-full object-cover"
         />
 
         {/* Blur */}
@@ -19,13 +19,13 @@ const FeatureSection = () => {
       </div>
 
 
-      <div className="container mx-auto">
-        <div className="flex flex-col lg:flex-row items-center justify-between gap-10">
+      <div className="max-w-[1240px]  mx-auto">
+        <div className="flex flex-col lg:flex-row items-center gap-[52px]">
 
           {/* Left Col */}
-          <div className="w-[63.54%]">
+          <div className="w-[60.32%]">
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12">
 
               {/* Col 1: Card 1, 3 */}
               <div className="flex flex-col gap-[180px]">
@@ -40,7 +40,7 @@ const FeatureSection = () => {
               <div className="flex flex-col justify-end gap-y-16">
                 <FeatureCard item={featureData[1]} />
                 {/* Khối thống kê: 30+ Dự án */}
-                <div className="inline-flex gap-3 items-center bg-brand text-white rounded-[20px] px-6 py-[39px] shadow-xl hover:shadow-orange-200/50 hover:-translate-y-1 transition-all duration-300 cursor-default">
+                <div className="inline-flex gap-3 items-center bg-brand text-white rounded-[20px] px-6 py-[39px] shadow-xl hover:shadow-orange-200/50 hover:-translate-y-1 transition-all duration-300">
                   <span className="text-4xl md:text-6xl font-bold">30+</span>
                   <div className="flex flex-col leading-tight font-bold text-2xl">
                     <span>dự án</span>
@@ -57,8 +57,8 @@ const FeatureSection = () => {
 
             {/* Trang trí gạch đầu dòng */}
             <div className="flex gap-2 mb-4">
-              <span className="w-5 h-1.5 bg-gradient-to-r from-[#FF782E] to-[#FAAF3A] rounded-full"></span>
-              <span className="w-10 h-1.5 bg-gradient-to-r from-[#FF782E] to-[#FAAF3A] rounded-full"></span>
+              <span className="w-5 h-1.5 bg-linear-to-r from-[#FF782E] to-brand rounded-full"></span>
+              <span className="w-10 h-1.5 bg-linear-to-r from-[#FF782E] to-brand rounded-full"></span>
             </div>
 
             <h2 className="text-3xl md:text-4xl font-bold text-brand mb-2 leading-tight">
@@ -83,12 +83,12 @@ const FeatureSection = () => {
 const FeatureCard = ({ item }) => {
   return (
     <div className="relative group max-w-[338px]">
-      <div className="absolute top-0 left-0 w-full h-full bg-[#FFAD2C] rounded-[20px] transform rotate-15 transition-all duration-300 -z-10 opacity-80"></div>
+      <div className="absolute top-0 left-0 w-[95%] h-[95%] bg-[#FFAD2C] rounded-[20px] transform rotate-15 transition-all duration-300 -z-10 opacity-80"></div>
       <article className="h-full w-full bg-white rounded-[20px] p-6 pt-15 shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-[#D4D4D4] hover:shadow-xl 
                             transition-all duration-300 hover:-translate-y-1  flex flex-col items-center justify-center text-center group relative">
 
         {/* Image Icon */}
-        <div className="absolute w-[120px] h-[175px] -top-[50%] bg-transparent flex items-center justify-center mx-auto">
+        <div className="absolute w-[120px] h-[175px] -top-[45%] bg-transparent flex items-center justify-center mx-auto">
           <img
             src={item.image}
             alt={item.title}

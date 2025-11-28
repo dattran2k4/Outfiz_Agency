@@ -1,31 +1,34 @@
 import { PhoneIcon, MailIcon, GPSIcon, FacebookIcon, InstagramIcon, TiktokIcon } from './Icons';
+import Background from "../images/footer-bg.png";
 import Logo from './Logo';
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-50 pt-16 pb-8 border-t border-gray-100">
-      <div className="container mx-auto px-4 max-w-6xl">
+    <footer className="relative">
+      <div className="absolute inset-0 -z-10 w-full">
+        <img src={Background} alt="" className="w-full h-full object-cover" />
+      </div>
+      <div className="mx-auto px-4 max-w-[1240px] py-[60px]">
 
         {/* Footer Top */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 mb-12">
+        <div className="flex justify-start gap-[60px] mb-12">
 
-          {/* Cột trái (Thông tin công ty) - Chiếm 5 phần */}
-          <div className="lg:col-span-5 flex flex-col items-start">
-            <div className="mb-6">
-              <Logo className="h-16 w-auto mb-4" /> {/* Logo to hơn chút */}
+          <div className="flex flex-col items-start w-[520px]">
+            <div className="mb-6 w-[115px] h-[45px]">
+              <Logo className="h-full w-full" /> {/* Logo to hơn chút */}
             </div>
 
-            <h3 className="font-bold text-gray-800 uppercase mb-3 leading-tight">
+            <h3 className="font-semibold text-[#404040] uppercase mb-2 leading-tight">
               CÔNG TY TNHH THƯƠNG MẠI & DỊCH VỤ OUTFIZ
             </h3>
 
-            <p className="text-gray-500 text-sm leading-relaxed mb-6">
+            <p className="text-[#525252]leading-snug">
               Tự hào đồng hành cùng hơn 100 doanh nghiệp Việt Nam phát triển kinh doanh từ mạng xã hội
             </p>
           </div>
 
           {/* Cột phải (Links) - Chiếm 7 phần */}
-          <div className="lg:col-span-7 grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-[60px]">
 
             {/* Introduction */}
             <div>
@@ -69,40 +72,40 @@ const Footer = () => {
         </div>
 
         {/* Footer Mid */}
-        <div className="border-t border-gray-200 py-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8">
+        <div className="flex gap-3">
 
           {/* Hotline & Email */}
-          <div className="lg:col-span-5 space-y-4">
+          <div className="space-y-4 flex">
             {/* Hotline */}
             <div className="flex items-start gap-3">
-              <span className="text-amber-500 mt-1">
-                <PhoneIcon className="w-5 h-5" />
+              <span className="text-brand">
+                <PhoneIcon className="w-6 h-6" color="currentColor" />
               </span>
               <div>
-                <h5 className="font-bold text-gray-700 text-sm">Hotline dịch vụ</h5>
+                <h5 className="font-bold text-gray-700 text-sm mb-2">Hotline dịch vụ</h5>
                 <p className="text-gray-500 text-sm">(+84) 90 1900 626 - (+84) 905 751 601</p>
               </div>
             </div>
 
             {/* Email */}
-            <div className="flex items-start gap-3">
-              <span className="text-amber-500 mt-1">
-                <MailIcon className="w-5 h-5" />
+            <div className="flex items-start gap-3 ml-3">
+              <span className="text-brand">
+                <MailIcon className="w-6 h-6" />
               </span>
               <div>
-                <h5 className="font-bold text-gray-700 text-sm">Email</h5>
+                <h5 className="font-bold text-gray-700 text-sm mb-2">Email</h5>
                 <p className="text-gray-500 text-sm">agency.outfiz.vn@gmail.com</p>
               </div>
             </div>
           </div>
 
           {/* Company Information */}
-          <div className="lg:col-span-7 flex items-start gap-3">
-            <span className="text-amber-500 mt-1">
-              <GPSIcon className="w-5 h-5" />
+          <div className="flex items-start gap-3">
+            <span className="text-brand">
+              <GPSIcon className="w-6 h-6" />
             </span>
             <div>
-              <h5 className="font-bold text-gray-700 text-sm">Văn phòng</h5>
+              <h5 className="font-bold text-gray-700 text-sm mb-2">Văn phòng</h5>
               <p className="text-gray-500 text-sm leading-relaxed">
                 Số 28, đường Nguyễn Đức Trung, phường Thanh Khê Đông, quận Thanh Khê, Đà Nẵng
               </p>
@@ -122,19 +125,20 @@ const Footer = () => {
             <span className="text-gray-500 hidden sm:block">Kết nối với Outfiz tại:</span>
             <div className="flex gap-3">
               {/* Facebook */}
-              <a href="#" className="w-8 h-8 rounded-full bg-amber-400 text-white flex items-center justify-center hover:bg-amber-500 transition">
-                <FacebookIcon className="w-5 h-5" />
-              </a>
-
-              {/* Tiktok */}
-              <a href="#" className="w-8 h-8 rounded-full bg-black text-white flex items-center justify-center hover:bg-gray-800 transition">
-                <TiktokIcon className="w-5 h-5" />
+              <a href="#" className="w-8 h-8 rounded-full text-white flex items-center justify-center transition">
+                <FacebookIcon className="w-6 h-6" />
               </a>
 
               {/* Instagram */}
-              <a href="#" className="w-8 h-8 rounded-full bg-purple-500 text-white flex items-center justify-center hover:bg-purple-600 transition bg-gradient-to-tr from-yellow-400 via-red-500 to-purple-500">
-                <InstagramIcon className="w-5 h-5" />
+              <a href="#" className="w-8 h-8 rounded-full flex items-center justify-center ">
+                <InstagramIcon className="w-6 h-6" />
               </a>
+
+              {/* Tiktok */}
+              <a href="#" className="w-8 h-8 rounded-full  text-white flex items-center justify-center transition">
+                <TiktokIcon className="w-6 h-6" />
+              </a>
+
             </div>
           </div>
 
