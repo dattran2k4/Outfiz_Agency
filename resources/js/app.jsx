@@ -1,10 +1,17 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
 import HomePage from './pages/HomePage';
-import '../css/app.css'
+import ServicePage from './pages/ServicePage';
+import '../css/app.css';
+import { Routes, Route } from 'react-router-dom';
 
-ReactDOM.createRoot(document.getElementById('app')).render(
-    <React.StrictMode>
-        <HomePage />
-    </React.StrictMode>
-);
+const App = () => {
+    return (
+    <Routes>
+      <Route path="/" element={<HomePage />} />
+      
+      <Route path="/services" element={<ServicePage />} />
+    </Routes>
+    )
+}
+
+export default App;

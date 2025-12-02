@@ -12,7 +12,7 @@ import NewsSection from '../components/NewsSection';
 import HireSection from '../components/HireSection';
 import Footer from '../components/Footer';
 
-export default function HomePage() {
+const HomePage = () => {
     return (
         <>
         <div className="relative w-full pt-8">
@@ -35,7 +35,8 @@ export default function HomePage() {
             <HireSection />
             <Footer />
         </div>
-            
         </>
     )
 }
+
+export default HomePage;

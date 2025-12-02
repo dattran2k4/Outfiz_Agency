@@ -2,14 +2,15 @@ import React, { useState } from 'react';
 import Button from './Button';
 import { VietnamFlagIcon, PhoneIcon, ChevronDownIcon } from './Icons';
 import LogoIcon from './Logo';
+import { Link } from 'react-router-dom';
 const Header = () => {
     // Dữ liệu menu để dễ quản lý
     const navItems = [
-      { label: "Về chúng tôi", hasDropdown: false },
-      { label: "Dịch vụ", hasDropdown: true },
-      { label: "Dự án", hasDropdown: false },
-      { label: "Tin tức", hasDropdown: false },
-      { label: "Tuyển dụng", hasDropdown: false },
+      { label: "Về chúng tôi", path: '/', hasDropdown: false },
+      { label: "Dịch vụ", path: '/services', hasDropdown: true },
+      { label: "Dự án", path: '/projects', hasDropdown: false },
+      { label: "Tin tức", path: '/news', hasDropdown: false },
+      { label: "Tuyển dụng", path: '/hire', hasDropdown: false },
     ];
   
     return (
@@ -26,9 +27,9 @@ const Header = () => {
           {/* 2. Navigation Links */}
         <nav className="hidden lg:flex items-center gap-8">
           {navItems.map((item, index) => (
-            <a 
+            <Link 
               key={index} 
-              href="#" 
+              to={item.path}
               // Class "group" ở đây để xử lý hover icon
               className="group text-gray-600 hover:text-brand font-medium text-sm transition-colors flex items-center gap-1"
             >
@@ -39,7 +40,7 @@ const Header = () => {
               {item.hasDropdown && (
                 <ChevronDownIcon className="w-3.5 h-3.5" color="currentColor" />
               )}
-            </a>
+            </Link>
           ))}
         </nav>
   
