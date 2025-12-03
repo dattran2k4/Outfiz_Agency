@@ -42,4 +42,4 @@ export const serviceData = [
     image: SEOImg,
     link: "#"
   }
-]
+];

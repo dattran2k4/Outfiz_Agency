@@ -1,12 +1,5 @@
-import Header from '../components/Header';
-import React from 'react';
-
 const ServicePage = () => {
-    return (
-        <div>
-            <Header />
-        </div>
-    )
-}
+    return <></>;
+};
 
 export default ServicePage;
