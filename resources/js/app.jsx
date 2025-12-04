@@ -1,8 +1,9 @@
 import HomePage from "./pages/HomePage";
-import ServicePage from "./pages/ServicePage";
+import { serviceData } from "./data/service";
 import MainLayout from "./layouts/MainLayout";
 import "../css/app.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import ServiceDetailPage from "./pages/ServiceDetailPage";
 
 const router = createBrowserRouter([
     {
@@ -13,10 +14,10 @@ const router = createBrowserRouter([
                 index: true, // Route mặc định (Trang chủ)
                 element: <HomePage />,
             },
-            {
-                path: "services",
-                element: <ServicePage />,
-            },
+            ...serviceData.map((service) => ({
+                path: service.link,
+                element: <ServiceDetailPage />,
+            })),
             // Thêm các trang khác tại đây
         ],
     },

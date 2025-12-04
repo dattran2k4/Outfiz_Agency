@@ -45,7 +45,7 @@ const ServiceCard = ({ data }) => {
         duration-300 hover:-translate-y-2 border border-[#D4D4D4] group flex flex-col items-center text-center h-full"
         >
             {/* Image */}
-            <div className="w150 h100 flex items-center justify-center">
+            <div className="w-[150px] h-[100px] flex items-center justify-center">
                 <img src={data.image} alt={data.title} className="w-full h-full object-cover" />
             </div>
             {/* Title */}

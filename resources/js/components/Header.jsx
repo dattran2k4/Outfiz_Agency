@@ -26,7 +26,7 @@ const Header = () => {
                 {/* 2. Navigation Links */}
                 <nav className="hidden lg:flex items-center gap-8">
                     {navItems.map((item, index) => (
-                        <div key={index} className="relative group flex items-center">
+                        <div key={index} className="relative group flex items-center group">
                             <Link
                                 to={item.path}
                                 className="group text-[#404040] hover:text-brand font-medium text-sm transition-colors flex items-center gap-1"
@@ -36,7 +36,7 @@ const Header = () => {
                                 {item.hasDropdown && <ChevronDownIcon className="w-3.5 h-3.5" color="currentColor" />}
                             </Link>
                             {item.hasDropdown && (
-                                <div className="absolute w-[1240px] h-[385px] top-[60px] z-99 -left-[388px]  rounded-bl-[15px] rounded-br-[15px]">
+                                <div className="absolute opacity-0 invisible group-hover:visible group-hover:opacity-100 transition-all duration-300 ease-in-out w-[1240px] h-[385px] top-[30px] pt-[30px] z-99 -left-[388px]  rounded-bl-[15px] rounded-br-[15px]">
                                     <ServiceInfo subItems={item.subItems} />
                                 </div>
                             )}
