@@ -1,98 +1,105 @@
-import {projectData} from '../data/project';
-import {ArrowLeft, ArrowRight, ArrowRightIcon} from '../components/Icons';
-import Button from '../components/Button';
-import NavButton from '../components/NavButton';
+import { ArrowLeft, ArrowRight, ArrowRightIcon } from "../components/Icons";
+import Button from "../components/Button";
+import NavButton from "../components/NavButton";
+import ProjectCard from "./ProjectCard";
+import { useState, useEffect } from "react";
+import Pagination from "./Pagination";
 
-const ProjectSection = () => {
+const ProjectSection = ({ itemsPerPage, isHomePage, data, className = "" }) => {
+    const [currentPage, setCurrentPage] = useState(1);
+
+    const totalPages = Math.ceil(data.length / itemsPerPage);
+
+    const startIndex = (currentPage - 1) * itemsPerPage;
+
+    const currentProjects = data.slice(startIndex, startIndex + itemsPerPage);
+
+    const handlePageChange = (pageNumber) => {
+        setCurrentPage(pageNumber);
+    };
+
+    useEffect(() => {
+        setCurrentPage(1);
+    }, [data]);
+
+    if (!data || data.length === 0) return null;
+
     return (
         <section className="py-16 bg-white">
-            <div className="container mx-auto px-4">
+            <div className="max-w-[1240px] mx-auto flex flex-col items-center">
+                {/* --- Phần Tiêu đề --- */}
+                {isHomePage && (
+                    <div className="mb-12 w-full text-center">
+                        <h2 className="text-3xl md:text-4xl font-bold text-brand mb-6">Dự Án Nổi Bật</h2>
+                        <p className="text-[#404040] font-medium text-lg leading-[4/3]">
+                            OUTFIZ đã đồng hành cùng hơn <strong>30+ thương hiệu</strong> trong đa dạng lĩnh vực như
+                            F&B, thời trang, giáo dục, du lịch, làm đẹp,...
+                        </p>
+                    </div>
+                )}
 
                 {/* --- Phần Tiêu đề --- */}
-                <div className="text-center mb-12">
-                    <h2 className="text-3xl md:text-4xl font-bold text-brand mb-6">
-                        Dự Án Nổi Bật
-                    </h2>
-                    <p className="text-[#404040] text-lg leading-[4/3]">
-                        OUTFIZ đã đồng hành cùng hơn <strong>30+ thương hiệu</strong> trong đa dạng lĩnh vực như F&B, thời trang, giáo dục, du lịch, làm đẹp,...
-                    </p>
-                </div>
+                {!isHomePage && (
+                    <div className="flex flex-col items-center">
+                        <div></div>
+                        <div></div>
+                    </div>
+                )}
 
                 {/* --- Phần Grid Cards & Navigation --- */}
-                <div className="flex items-center justify-between gap-6">
-
+                <div className={`${isHomePage ? "flex items-center justify-between gap-6" : "w-full"}`}>
                     {/* Previous Button */}
-                    <NavButton>
-                        <ArrowLeft />
-                    </NavButton>
+                    {isHomePage && (
+                        <div className="hidden md:block">
+                            <NavButton className="w-10 h-10">
+                                <ArrowLeft />
+                            </NavButton>
+                        </div>
+                    )}
 
                     {/* Cards List */}
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full">
-                        {projectData.map((project) => (
-                            <article key={project.id} className="bg-white border border-[#E5E5E5] rounded-[20px] overflow-hidden hover:shadow-xl transition duration-300 flex flex-col items-center py-6 px-4">
-
-                                {/* Project Img */}
-                                <div className="w-full h-[235px] rounded-2xl overflow-hidden mb-6 relative">
-                                    <img
-                                        src={project.image}
-                                        alt={project.title}
-                                        className="w-full h-full object-cover"
-                                    />
-                                </div>
-
-                                {/* Tag */}
-                                <div className="mb-4">
-                                    <span className="px-4 py-2 rounded-full border border-[#D4D4D4] text-[#737373] text-sm bg-white">
-                                        {project.tag}
-                                    </span>
-                                </div>
-
-                                {/* Title */}
-                                <h3 className="text-2xl font-bold mb-2">
-                                    {project.title}
-                                </h3>
-
-                                {/* Description */}
-                                <p className="text-[#404040] text-center text-sm mb-3 line-clamp-2">
-                                    {project.description}
-                                </p>
-
-                                {/* Detail Button */}
-                                <a href={project.link} className="mt-auto px-6 py-2">
-                                    <Button variant="outline" className="cursor-pointer">
-                                        Xem chi tiết
-                                        <ArrowRightIcon />
-                                    </Button>
-                                </a>
-
-                            </article>
+                        {currentProjects.map((project) => (
+                            <ProjectCard key={project.id} data={project} />
                         ))}
                     </div>
 
                     {/* Next Button */}
-                    <NavButton >
-                        <ArrowRight />
-                    </NavButton>
+                    {isHomePage && (
+                        <div className="hidden md:block">
+                            <NavButton className="w-10 h-10">
+                                <ArrowRight />
+                            </NavButton>
+                        </div>
+                    )}
                 </div>
 
-                {/*  Pagination */}
-                <div className="flex justify-center mt-8 gap-2">
-                    <span className="w-8 h-1.5 bg-amber-500 rounded-full cursor-pointer"></span>
-                    <span className="w-8 h-1.5 bg-amber-100 rounded-full cursor-pointer hover:bg-amber-200"></span>
-                    <span className="w-8 h-1.5 bg-amber-100 rounded-full cursor-pointer hover:bg-amber-200"></span>
-                </div>
+                {/*  Pagination For Home Page */}
+                {isHomePage && (
+                    <div className="flex justify-center mt-8 gap-2">
+                        <span className="w-8 h-1.5 bg-amber-500 rounded-full cursor-pointer"></span>
+                        <span className="w-8 h-1.5 bg-amber-100 rounded-full cursor-pointer hover:bg-amber-200"></span>
+                        <span className="w-8 h-1.5 bg-amber-100 rounded-full cursor-pointer hover:bg-amber-200"></span>
+                    </div>
+                )}
+
+                {/*  Pagination For Project Page */}
+                {!isHomePage && (
+                    <Pagination totalPages={totalPages} currentPage={currentPage} onChange={handlePageChange} />
+                )}
 
                 {/* Button All --- */}
-                <a className="mt-12 inline-flex w-full justify-center items-center">
-                    <Button className="w-[205px]">
-                        Xem tất cả dự án
-                        <ArrowRightIcon />
-                    </Button>
-                </a>
-
+                {isHomePage && (
+                    <a className="mt-12 inline-flex w-full justify-center items-center">
+                        <Button className="w-[205px]">
+                            Xem tất cả dự án
+                            <ArrowRightIcon />
+                        </Button>
+                    </a>
+                )}
             </div>
         </section>
-    )
-}
+    );
+};
 
 export default ProjectSection;

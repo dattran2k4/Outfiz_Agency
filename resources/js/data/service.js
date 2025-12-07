@@ -30,7 +30,7 @@ export const serviceData = [
     title: "Quản trị & chăm sóc Social",
     description: "Bắt trend nhanh - Nội dung cuốn hút – Gắn kết khách hàng, tối ưu hiệu quả và chi phí.",
     detail : "Phát triển các kênh social toàn diện, tăng tương tác, tạo chuyển đổi. Giúp doanh nghiệp luôn duy trì hình ảnh chuyên nghiệp - chìa khoá kết nối khách hàng hiệu quả.",
-    image: manageImg, // Thay bằng đường dẫn ảnh thật của bạn
+    image: manageImg,
     link: "quan-tri-cham-soc-social",
     includes: [
             {

@@ -4,6 +4,10 @@ import MainLayout from "./layouts/MainLayout";
 import "../css/app.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import ServiceDetailPage from "./pages/ServiceDetailPage";
+import ProjectPage from "./pages/ProjectPage";
+import bgImg from "./images/bg.png";
+import { projectData } from "./data/project";
+import ProjectDetailPage from "./pages/ProjectDetailPage";
 
 const router = createBrowserRouter([
     {
@@ -16,9 +20,16 @@ const router = createBrowserRouter([
             },
             ...serviceData.map((service) => ({
                 path: service.link,
-                element: <ServiceDetailPage />,
+                element: <ServiceDetailPage bgImage={bgImg} />,
             })),
-            // Thêm các trang khác tại đây
+            {
+                path: "du-an",
+                element: <ProjectPage bgImage={bgImg} />,
+            },
+            {
+                path: "du-an/:slug",
+                element: <ProjectDetailPage bgImage={bgImg} />,
+            },
         ],
     },
     {

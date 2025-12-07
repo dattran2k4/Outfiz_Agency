@@ -1,68 +1,58 @@
-import { serviceData } from "../data/service";
 import Button from "./Button";
 import { VietnamFlagIcon, PhoneIcon, ChevronDownIcon, ArrowRightIcon } from "./Icons";
 import LogoIcon from "./Logo";
 import { Link } from "react-router-dom";
 import { useState } from "react";
+import { navItems } from "../data/nav";
 const Header = () => {
-    // Dữ liệu menu để dễ quản lý
-    const navItems = [
-        { label: "Về chúng tôi", path: "/", hasDropdown: false },
-        { label: "Dịch vụ", path: "/services", hasDropdown: true, subItems: serviceData },
-        { label: "Dự án", path: "/projects", hasDropdown: false },
-        { label: "Tin tức", path: "/news", hasDropdown: false },
-        { label: "Tuyển dụng", path: "/hire", hasDropdown: false },
-    ];
-
     return (
         <>
-            {/* Header chính */}
-            <header className="w-full mx-auto max-w-[1240px] bg-white rounded-2xl shadow-lg px-10 py-5 flex items-center justify-between">
-                <a href="/" className="cursor-pointer flex items-center">
-                    {/* Component Logo của bạn */}
-                    <LogoIcon className="h-11 w-auto" />
-                </a>
+            <header className="sticky top-5 z-999 w-full flex justify-center -mb-[83px] pointer-events-none">
+                <nav className="w-full max-w-[1240px] bg-white rounded-2xl shadow-lg px-10 py-5 flex items-center justify-between pointer-events-auto">
+                    {/* 1. Logo */}
+                    <a href="/" className="cursor-pointer flex items-center">
+                        <LogoIcon className="h-11 w-auto" />
+                    </a>
 
-                {/* 2. Navigation Links */}
-                <nav className="hidden lg:flex items-center gap-8">
-                    {navItems.map((item, index) => (
-                        <div key={index} className="relative group flex items-center group">
-                            <Link
-                                to={item.path}
-                                className="group text-[#404040] hover:text-brand font-medium text-sm transition-colors flex items-center gap-1"
-                            >
-                                {item.label}
+                    {/* 2. Navigation Links */}
+                    <nav className="hidden lg:flex items-center gap-8">
+                        {navItems.map((item, index) => (
+                            <div key={index} className="relative group flex items-center">
+                                <Link
+                                    to={item.path}
+                                    className="group text-[#404040] hover:text-brand font-medium text-sm transition-colors flex items-center gap-1"
+                                >
+                                    {item.label}
+                                    {item.hasDropdown && (
+                                        <ChevronDownIcon className="w-3.5 h-3.5" color="currentColor" />
+                                    )}
+                                </Link>
 
-                                {item.hasDropdown && <ChevronDownIcon className="w-3.5 h-3.5" color="currentColor" />}
-                            </Link>
-                            {item.hasDropdown && (
-                                <div className="absolute opacity-0 invisible group-hover:visible group-hover:opacity-100 transition-all duration-300 ease-in-out w-[1240px] h-[385px] top-[30px] pt-[30px] z-99 -left-[388px]  rounded-bl-[15px] rounded-br-[15px]">
-                                    <ServiceInfo subItems={item.subItems} />
-                                </div>
-                            )}
-                        </div>
-                    ))}
+                                {/* Dropdown Menu */}
+                                {item.hasDropdown && (
+                                    <div className="absolute opacity-0 invisible group-hover:visible group-hover:opacity-100 transition-all duration-300 ease-in-out w-[1240px] h-auto top-full pt-4 z-[99] left-1/2 -translate-x-1/2 rounded-bl-[15px] rounded-br-[15px]">
+                                        {/* Lưu ý: Bạn cần chỉnh lại CSS của Dropdown một chút để phù hợp với vị trí mới, 
+                                 mình đã đổi top/left để nó căn giữa linh hoạt hơn */}
+                                        <ServiceInfo subItems={item.subItems} />
+                                    </div>
+                                )}
+                            </div>
+                        ))}
+                    </nav>
+
+                    {/* 3. Right Actions */}
+                    <div className="flex items-center gap-4">
+                        <Button variant="outline">
+                            <VietnamFlagIcon />
+                            Tiếng Việt
+                            <ChevronDownIcon color="#FAAF3A" />
+                        </Button>
+
+                        <Button variant="primary" icon={<PhoneIcon color="white" />}>
+                            Liên hệ ngay
+                        </Button>
+                    </div>
                 </nav>
-
-                {/* 3. Right Actions (Language & CTA) */}
-                <div className="flex items-center gap-4">
-                    {/* Button Tiếng Việt */}
-                    <Button variant="outline">
-                        <VietnamFlagIcon />
-                        Tiếng Việt
-                        {/* Arrow Icon cho nút ngôn ngữ: Màu cam (brand) */}
-                        <ChevronDownIcon color="#FAAF3A" />
-                    </Button>
-
-                    {/* Button Liên hệ */}
-                    <Button
-                        variant="primary"
-                        // Truyền Icon Phone vào, set màu trắng
-                        icon={<PhoneIcon color="white" />}
-                    >
-                        Liên hệ ngay
-                    </Button>
-                </div>
             </header>
         </>
     );

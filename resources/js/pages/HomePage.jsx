@@ -10,6 +10,7 @@ import RegisterSection from "../components/RegisterSection";
 import NewsSection from "../components/NewsSection";
 import HireSection from "../components/HireSection";
 import Footer from "../components/Footer";
+import { projectData } from "../data/project";
 
 const HomePage = () => {
     return (
@@ -28,7 +29,7 @@ const HomePage = () => {
 
             <ServiceSection />
             <FeatureSection />
-            <ProjectSection />
+            <ProjectSection isHomePage={true} itemsPerPage={3} data={projectData} />
             <FeedbackSection />
             <RegisterSection />
             <NewsSection />

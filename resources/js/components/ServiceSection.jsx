@@ -49,7 +49,7 @@ const ServiceCard = ({ data }) => {
                 <img src={data.image} alt={data.title} className="w-full h-full object-cover" />
             </div>
             {/* Title */}
-            <h3 className="text-3xl leading-5 text-[#404040] font-bold mt-8">{data.title}</h3>
+            <h3 className="text-3xl  text-[#404040] font-bold mt-8">{data.title}</h3>
             {/* Description */}
             <p className="text-lg text-[#404040] mt-5 leading-[4/3] line-clamp-1">{data.description}</p>
             {/* Button */}
