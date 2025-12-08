@@ -4,23 +4,30 @@ import NavButton from "../components/NavButton";
 import ProjectCard from "./ProjectCard";
 import { useState, useEffect } from "react";
 import Pagination from "./Pagination";
+import { usePagination } from "./usePagination";
+import { Link } from "react-router-dom";
 
-const ProjectSection = ({ itemsPerPage, isHomePage, data, className = "" }) => {
-    const [currentPage, setCurrentPage] = useState(1);
+const ProjectSection = ({ itemsPerPage, isHomePage, data }) => {
+    // const [currentPage, setCurrentPage] = useState(1);
 
-    const totalPages = Math.ceil(data.length / itemsPerPage);
+    // const totalPages = Math.ceil(data.length / itemsPerPage);
 
-    const startIndex = (currentPage - 1) * itemsPerPage;
+    // const startIndex = (currentPage - 1) * itemsPerPage;
 
-    const currentProjects = data.slice(startIndex, startIndex + itemsPerPage);
+    // const currentProjects = data.slice(startIndex, startIndex + itemsPerPage);
 
-    const handlePageChange = (pageNumber) => {
-        setCurrentPage(pageNumber);
-    };
+    // const handlePageChange = (pageNumber) => {
+    //     setCurrentPage(pageNumber);
+    // };
 
-    useEffect(() => {
-        setCurrentPage(1);
-    }, [data]);
+    // useEffect(() => {
+    //     setCurrentPage(1);
+    // }, [data]);
+
+    const { currentPage, totalPages, currentData, handlePageChange } = usePagination({
+        data: data,
+        itemsPerPage: itemsPerPage,
+    });
 
     if (!data || data.length === 0) return null;
 
@@ -59,7 +66,7 @@ const ProjectSection = ({ itemsPerPage, isHomePage, data, className = "" }) => {
 
                     {/* Cards List */}
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full">
-                        {currentProjects.map((project) => (
+                        {currentData.map((project) => (
                             <ProjectCard key={project.id} data={project} />
                         ))}
                     </div>
@@ -90,12 +97,12 @@ const ProjectSection = ({ itemsPerPage, isHomePage, data, className = "" }) => {
 
                 {/* Button All --- */}
                 {isHomePage && (
-                    <a className="mt-12 inline-flex w-full justify-center items-center">
+                    <Link to="/du-an" className="mt-12 inline-flex w-full justify-center items-center">
                         <Button className="w-[205px]">
                             Xem tất cả dự án
                             <ArrowRightIcon />
                         </Button>
-                    </a>
+                    </Link>
                 )}
             </div>
         </section>

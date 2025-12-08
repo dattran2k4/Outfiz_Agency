@@ -8,6 +8,8 @@ import ProjectPage from "./pages/ProjectPage";
 import bgImg from "./images/bg.png";
 import { projectData } from "./data/project";
 import ProjectDetailPage from "./pages/ProjectDetailPage";
+import NewsPage from "./pages/NewsPage";
+import NewsDetailPage from "./pages/NewsDetailPage";
 
 const router = createBrowserRouter([
     {
@@ -29,6 +31,15 @@ const router = createBrowserRouter([
             {
                 path: "du-an/:slug",
                 element: <ProjectDetailPage bgImage={bgImg} />,
+            },
+            {
+                path: "tin-tuc",
+                element: <NewsPage bgImage={bgImg} />,
+            },
+            {
+                //TO-DO replace chi-tiet -> slug
+                path: "tin-tuc/chi-tiet",
+                element: <NewsDetailPage bgImage={bgImg} />,
             },
         ],
     },

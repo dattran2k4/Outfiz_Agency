@@ -37,5 +37,69 @@ export const newsArticles = [
     title: "Google Update 2025: Những điều SEOer cần biết",
     excerpt: "Cập nhật thuật toán mới nhất của Google tập trung vào trải nghiệm người dùng và nội dung hữu ích (Helpful Content).",
     slug: "#"
-  }
+  },
+  {
+    id: 4,
+    image: NewsDefaultImg,
+    date: "08/05/2025",
+    category: "SEO tổng thể",
+    title: "Google Update 2025: Những điều SEOer cần biết",
+    excerpt: "Cập nhật thuật toán mới nhất của Google tập trung vào trải nghiệm người dùng và nội dung hữu ích (Helpful Content).",
+    slug: "#"
+  },
+  {
+    id: 5,
+    image: NewsDefaultImg,
+    date: "08/05/2025",
+    category: "SEO tổng thể",
+    title: "Google Update 2025: Những điều SEOer cần biết",
+    excerpt: "Cập nhật thuật toán mới nhất của Google tập trung vào trải nghiệm người dùng và nội dung hữu ích (Helpful Content).",
+    slug: "#"
+  },
+  {
+    id: 6,
+    image: NewsDefaultImg,
+    date: "08/05/2025",
+    category: "SEO tổng thể",
+    title: "Google Update 2025: Những điều SEOer cần biết",
+    excerpt: "Cập nhật thuật toán mới nhất của Google tập trung vào trải nghiệm người dùng và nội dung hữu ích (Helpful Content).",
+    slug: "#"
+  },
+  {
+    id: 7,
+    image: NewsDefaultImg,
+    date: "08/05/2025",
+    category: "SEO tổng thể",
+    title: "Google Update 2025: Những điều SEOer cần biết",
+    excerpt: "Cập nhật thuật toán mới nhất của Google tập trung vào trải nghiệm người dùng và nội dung hữu ích (Helpful Content).",
+    slug: "#"
+  },
+  {
+    id: 8,
+    image: NewsDefaultImg,
+    date: "08/05/2025",
+    category: "SEO tổng thể",
+    title: "Google Update 2025: Những điều SEOer cần biết",
+    excerpt: "Cập nhật thuật toán mới nhất của Google tập trung vào trải nghiệm người dùng và nội dung hữu ích (Helpful Content).",
+    slug: "#"
+  },
+  {
+    id: 9,
+    image: NewsDefaultImg,
+    date: "08/05/2025",
+    category: "SEO tổng thể",
+    title: "Google Update 2025: Những điều SEOer cần biết",
+    excerpt: "Cập nhật thuật toán mới nhất của Google tập trung vào trải nghiệm người dùng và nội dung hữu ích (Helpful Content).",
+    slug: "#"
+  },
+  {
+    id: 10,
+    image: NewsDefaultImg,
+    date: "08/05/2025",
+    category: "SEO tổng thể",
+    title: "Google Update 2025: Những điều SEOer cần biết",
+    excerpt: "Cập nhật thuật toán mới nhất của Google tập trung vào trải nghiệm người dùng và nội dung hữu ích (Helpful Content).",
+    slug: "#"
+  },
+  
 ];

@@ -32,7 +32,7 @@ const HomePage = () => {
             <ProjectSection isHomePage={true} itemsPerPage={3} data={projectData} />
             <FeedbackSection />
             <RegisterSection />
-            <NewsSection />
+            <NewsSection isHomePage={true} itemsPerPage={3} />
             <HireSection />
             <Footer />
         </>

@@ -11,7 +11,9 @@ const Header = () => {
                 <nav className="w-full max-w-[1240px] bg-white rounded-2xl shadow-lg px-10 py-5 flex items-center justify-between pointer-events-auto">
                     {/* 1. Logo */}
                     <a href="/" className="cursor-pointer flex items-center">
-                        <LogoIcon className="h-11 w-auto" />
+                        <div className="h-[45px] w-[116px]">
+                            <LogoIcon className="" />
+                        </div>
                     </a>
 
                     {/* 2. Navigation Links */}
