@@ -4,7 +4,7 @@ const NewsHeader = ({ bgImage }) => {
             <div className="absolute -z-10 h-full w-full">
                 <img src={bgImage} className="w-full h-full object-cover object-center" alt="Outfiz" />
             </div>
-            <div className="z-10 mt-[185px] ">
+            <div className="z-10 mt-[185px] max-w-[1240px] ">
                 {/* Tiêu đề */}
                 <h1 className="text-3xl text-center md:text-[40px] font-bold text-brand uppercase mb-3 drop-shadow-sm">
                     TIN TỨC

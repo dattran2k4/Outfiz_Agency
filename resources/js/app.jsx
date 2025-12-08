@@ -10,6 +10,9 @@ import { projectData } from "./data/project";
 import ProjectDetailPage from "./pages/ProjectDetailPage";
 import NewsPage from "./pages/NewsPage";
 import NewsDetailPage from "./pages/NewsDetailPage";
+import HirePage from "./pages/HirePage";
+import HireDetailPage from "./pages/HireDetailPage";
+import ApplyPage from "./pages/ApplyPage";
 
 const router = createBrowserRouter([
     {
@@ -40,6 +43,22 @@ const router = createBrowserRouter([
                 //TO-DO replace chi-tiet -> slug
                 path: "tin-tuc/chi-tiet",
                 element: <NewsDetailPage bgImage={bgImg} />,
+            },
+            {
+                //TO-DO replace chi-tiet -> slug
+                path: "tuyen-dung",
+                element: <HirePage bgImage={bgImg} />,
+            },
+            {
+                //TO-DO replace chi-tiet -> slug
+                path: "tuyen-dung/chi-tiet",
+                element: <HireDetailPage bgImage={bgImg} />,
+            },
+
+            {
+                //TO-DO replace chi-tiet -> slug
+                path: "ung-tuyen",
+                element: <ApplyPage bgImage={bgImg} />,
             },
         ],
     },

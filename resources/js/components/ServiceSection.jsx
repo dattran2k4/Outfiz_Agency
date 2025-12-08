@@ -1,6 +1,7 @@
 import { serviceData } from "../data/service";
 import Button from "../components/Button";
 import { ArrowRightIcon } from "../components/Icons";
+import { Link } from "react-router-dom";
 const ServiceSection = () => {
     return (
         <section className="py-20 bg-transparent">
@@ -54,12 +55,12 @@ const ServiceCard = ({ data }) => {
             <p className="text-lg text-[#404040] mt-5 leading-[4/3] line-clamp-1">{data.description}</p>
             {/* Button */}
             <div className="mt-7">
-                <a href="#!" className="mx-auto inline-flex items-center justify-center">
+                <Link to={`${data.link}`} className="mx-auto inline-flex items-center justify-center">
                     <Button className="h-[42px]! w-[167px]!" variant="outline">
                         Xem thêm
                         <ArrowRightIcon />
                     </Button>
-                </a>
+                </Link>
             </div>
         </article>
     );

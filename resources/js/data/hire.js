@@ -24,5 +24,37 @@ export const hiringJobs = [
     deadline: "30/06/2025",
     image: HireDefaultImg,
     link: "#"
-  }
+  },
+  {
+    id: 4,
+    title: "Account Executive",
+    type: "Parttime",
+    deadline: "30/06/2025",
+    image: HireDefaultImg,
+    link: "#"
+  },
+  {
+    id: 5,
+    title: "Account Executive",
+    type: "Parttime",
+    deadline: "30/06/2025",
+    image: HireDefaultImg,
+    link: "#"
+  },
+  {
+    id: 6,
+    title: "Account Executive",
+    type: "Parttime",
+    deadline: "30/06/2025",
+    image: HireDefaultImg,
+    link: "#"
+  },
+  {
+    id: 7,
+    title: "Account Executive",
+    type: "Parttime",
+    deadline: "30/06/2025",
+    image: HireDefaultImg,
+    link: "#"
+  },
 ];

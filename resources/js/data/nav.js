@@ -5,6 +5,6 @@ export const navItems = [
         { label: "Dịch vụ", path: "#", hasDropdown: true, subItems: serviceData },
         { label: "Dự án", path: "/du-an", hasDropdown: false },
         { label: "Tin tức", path: "/tin-tuc", hasDropdown: false },
-        { label: "Tuyển dụng", path: "/hire", hasDropdown: false },
+        { label: "Tuyển dụng", path: "/tuyen-dung", hasDropdown: false },
 ];
 

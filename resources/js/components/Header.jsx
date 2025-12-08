@@ -7,7 +7,7 @@ import { navItems } from "../data/nav";
 const Header = () => {
     return (
         <>
-            <header className="sticky top-5 z-999 w-full flex justify-center -mb-[83px] pointer-events-none">
+            <header className="sticky top-5 z-999 w-full flex justify-center -mb-[84px] pointer-events-none">
                 <nav className="w-full max-w-[1240px] bg-white rounded-2xl shadow-lg px-10 py-5 flex items-center justify-between pointer-events-auto">
                     {/* 1. Logo */}
                     <a href="/" className="cursor-pointer flex items-center">
@@ -32,9 +32,7 @@ const Header = () => {
 
                                 {/* Dropdown Menu */}
                                 {item.hasDropdown && (
-                                    <div className="absolute opacity-0 invisible group-hover:visible group-hover:opacity-100 transition-all duration-300 ease-in-out w-[1240px] h-auto top-full pt-4 z-[99] left-1/2 -translate-x-1/2 rounded-bl-[15px] rounded-br-[15px]">
-                                        {/* Lưu ý: Bạn cần chỉnh lại CSS của Dropdown một chút để phù hợp với vị trí mới, 
-                                 mình đã đổi top/left để nó căn giữa linh hoạt hơn */}
+                                    <div className="absolute opacity-0 invisible group-hover:visible group-hover:opacity-100 transition-all duration-300 ease-in-out w-[1240px] h-auto top-full pt-4 z-99 -left-[388px] rounded-bl-[15px] rounded-br-[15px]">
                                         <ServiceInfo subItems={item.subItems} />
                                     </div>
                                 )}
@@ -70,7 +68,7 @@ const ServiceInfo = ({ subItems }) => {
     };
 
     return (
-        <div className="bg-white w-full flex items-center p-8 rounded-bl-[15px] rounded-br-[15px] h-full ">
+        <div className="bg-white w-full min-h-[402px] flex items-center p-8 rounded-bl-[15px] rounded-br-[15px] h-full ">
             {/* Left */}
             <div className="w-[385px]">
                 <h3 className="text-2xl font-bold text-[#404040] mb-6">Dịch Vụ</h3>
