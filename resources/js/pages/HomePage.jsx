@@ -1,4 +1,3 @@
-import Header from "../components/Header";
 import Hero from "../components/Hero";
 import Background from "../images/background.png";
 import AboutSection from "../components/AboutSection";
@@ -15,12 +14,8 @@ import { projectData } from "../data/project";
 const HomePage = () => {
     return (
         <>
-            <div className="relative w-full pt-8">
-                <img
-                    src={Background}
-                    alt="Background Sky"
-                    className="absolute inset-0 w-full max-h-[1391px] object-cover z-0"
-                />
+            <div className="relative w-full min-h-[1391px]">
+                <img src={Background} alt="Background Sky" className="absolute w-full h-full object-cover z-0" />
                 <div className="relative z-10">
                     <Hero />
                     <AboutSection />

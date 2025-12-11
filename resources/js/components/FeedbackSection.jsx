@@ -4,9 +4,10 @@ import { ArrowLeft, ArrowRight, StarIcon } from "../components/Icons";
 import BackGroundFeedBack from "../images/feedback/background-feedback.png";
 import Background from "../images/feedback/background.png";
 import BackgroundAvatar from "../images/feedback/background-avatar.png";
+import StarRating from "./StarRating";
 const FeedbackSection = () => {
     return (
-        <section className="relative">
+        <section className="relative py-15">
             <div className="w-full absolute inset-0 -z-10">
                 <img src={Background} alt="Background" className="w-full h-full object-cover" />
             </div>
@@ -43,18 +44,14 @@ const FeedbackSection = () => {
                 {/* --- Phần 2: Feedback Cards --- */}
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                     {feedbacks.map((item) => (
-                        <div key={item.id} className="relative group max-h-60">
+                        <article key={item.id} className="relative group w-[392px] h-60">
                             {/* 1. Background  */}
-                            <div className="absolute inset-0 z-0">
-                                <img
-                                    src={BackGroundFeedBack}
-                                    alt="bg-card"
-                                    className="w-full h-full object-cover drop-shadow-md"
-                                />
+                            <div className="absolute h-full w-full">
+                                <img src={BackGroundFeedBack} alt="bg-card" className="w-full h-full object-fill" />
                             </div>
 
                             {/* 2. Content */}
-                            <div className="relative z-10 pt-[18px] pb-[45px] pl-6 pr-12 flex flex-col h-full">
+                            <div className="relative z-10 flex pt-[18px] pb-[45px] pl-6 pr-12  flex-col">
                                 {/* Header Card: Avatar + Info + Start */}
                                 <div className="flex items-center gap-3 mb-3">
                                     {/* Khối Avatar với nền vàng */}
@@ -82,17 +79,7 @@ const FeedbackSection = () => {
                                         </h4>
                                         <span className="text-gray-500 text-sm mb-2">{item.role}</span>
 
-                                        {/* Rating Stars */}
-                                        <div className="flex gap-2">
-                                            {[...Array(5)].map((_, i) => (
-                                                <StarIcon
-                                                    key={i}
-                                                    className={`w-5 h-5 ${
-                                                        i < item.rating ? "text-brand" : "text-[#E5E5E5]"
-                                                    }`}
-                                                />
-                                            ))}
-                                        </div>
+                                        <StarRating rating={item.rating} />
                                     </div>
                                 </div>
 
@@ -102,7 +89,7 @@ const FeedbackSection = () => {
                                 {/* Dấu quote đã có sẵn trong ảnh nền (góc phải dưới), 
                     nên ta chỉ cần padding bottom cho text để không đè lên nó */}
                             </div>
-                        </div>
+                        </article>
                     ))}
                 </div>
             </div>

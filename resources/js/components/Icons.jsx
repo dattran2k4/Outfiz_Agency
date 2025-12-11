@@ -53,10 +53,10 @@ export const PhoneIcon = ({ className = "w-5 h-5", color = "white" }) => (
 
 // 3. Icon Arrow Down
 export const ChevronDownIcon = ({ className = "w-5 h-5", color = "currentColor" }) => (
-    <svg className={className} viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg className={className} viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
         <path
             d="M14.9334 6.81668H9.7417H5.0667C4.2667 6.81668 3.8667 7.78335 4.43337 8.35001L8.75003 12.6667C9.4417 13.3583 10.5667 13.3583 11.2584 12.6667L12.9 11.025L15.575 8.35001C16.1334 7.78335 15.7334 6.81668 14.9334 6.81668Z"
-            fill={color}
+            fill="currentColor"
         />
     </svg>
 );

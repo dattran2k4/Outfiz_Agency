@@ -6,7 +6,7 @@ import HireCard from "./HireCard";
 
 const HireSection = () => {
     return (
-        <section className="py-20 bg-white relative">
+        <section className="py-15 bg-white relative">
             <div className="max-w-[1240px] mx-auto relative">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
                     {/* Left Col */}
@@ -46,8 +46,8 @@ const HireSection = () => {
 
                     {/* Right Col */}
                     <div className="flex flex-col gap-6">
-                        {hiringJobs.map((job) => (
-                            <HireCard job={job} />
+                        {hiringJobs.slice(0, 3).map((job) => (
+                            <HireCard job={job} key={job.id} />
                         ))}
                     </div>
                 </div>

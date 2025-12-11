@@ -22,7 +22,7 @@ const NewsSection = ({ itemsPerPage, isHomePage }) => {
     console.log(currentData);
 
     return (
-        <section className="py-20 bg-white">
+        <section className="py-15 bg-white">
             <div className="max-w-[1240px] mx-auto">
                 {/* Header News Home Page */}
                 {isHomePage && (
@@ -79,12 +79,12 @@ const NewsSection = ({ itemsPerPage, isHomePage }) => {
                 {/* List News */}
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                     {currentData.map((article) => (
-                        <NewsCard article={article} />
+                        <NewsCard key={article.id} article={article} />
                     ))}
                 </div>
                 {/* --- Button View All (Bottom) --- */}
                 {isHomePage && (
-                    <div className="flex justify-center mt-16">
+                    <div className="flex justify-center mt-10">
                         <Link to="/tin-tuc">
                             <Button className="w-[211px]!">
                                 Xem tất cả tin tức

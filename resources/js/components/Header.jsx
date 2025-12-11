@@ -7,12 +7,12 @@ import { navItems } from "../data/nav";
 const Header = () => {
     return (
         <>
-            <header className="sticky top-5 z-999 w-full flex justify-center -mb-[84px] pointer-events-none">
+            <header className="sticky top-10 z-999 w-full flex justify-center -mb-[84px] pointer-events-none">
                 <nav className="w-full max-w-[1240px] bg-white rounded-2xl shadow-lg px-10 py-5 flex items-center justify-between pointer-events-auto">
                     {/* 1. Logo */}
                     <a href="/" className="cursor-pointer flex items-center">
                         <div className="h-[45px] w-[116px]">
-                            <LogoIcon className="" />
+                            <LogoIcon />
                         </div>
                     </a>
 

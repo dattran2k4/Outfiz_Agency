@@ -4,8 +4,8 @@ import { ArrowRightIcon } from "../components/Icons";
 import { Link } from "react-router-dom";
 const ServiceSection = () => {
     return (
-        <section className="py-20 bg-transparent">
-            <div className="max-w-[1240px] mx-auto px-4">
+        <section className="py-15 bg-transparent">
+            <div className="max-w-[1240px] mx-auto">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-5">
                     {/* LEFT TEXT CONTENT */}
                     <div className="flex flex-col justify-center pr-0 md:pr-8">

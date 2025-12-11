@@ -26,15 +26,6 @@ const Pagination = ({ totalPages, currentPage, onChange }) => {
 
     return (
         <div className="flex justify-center items-center gap-2 mt-8">
-            {/* Previous */}
-            <button
-                disabled={currentPage === 1}
-                onClick={() => onChange(currentPage - 1)}
-                className="px-3 py-2 rounded bg-gray-100 hover:bg-gray-200 disabled:opacity-50"
-            >
-                ‹
-            </button>
-
             {/* Pages */}
             {pages.map((page, index) => {
                 if (page === "...") {
@@ -50,7 +41,7 @@ const Pagination = ({ totalPages, currentPage, onChange }) => {
                         key={index}
                         onClick={() => onChange(page)}
                         className={`w-10 h-10 rounded-full font-semibold transition text-[#404040]
-                            ${currentPage === page ? "bg-brand text-white" : " hover:bg-orange-200"}
+                            ${currentPage === page ? "bg-brand text-white" : " hover:bg-orange-200 cursor-pointer"}
                         `}
                     >
                         {page}
@@ -62,9 +53,9 @@ const Pagination = ({ totalPages, currentPage, onChange }) => {
             <button
                 disabled={currentPage === totalPages}
                 onClick={() => onChange(currentPage + 1)}
-                className="px-3 py-2 rounded bg-gray-100 hover:bg-gray-200 disabled:opacity-50"
+                className="cursor-pointer"
             >
-                ›
+                <img src={arrrowRightIcon} alt="" />
             </button>
         </div>
     );

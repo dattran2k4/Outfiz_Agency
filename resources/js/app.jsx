@@ -5,7 +5,7 @@ import "../css/app.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import ServiceDetailPage from "./pages/ServiceDetailPage";
 import ProjectPage from "./pages/ProjectPage";
-import bgImg from "./images/bg.png";
+import bgImg from "./images/background.png";
 import { projectData } from "./data/project";
 import ProjectDetailPage from "./pages/ProjectDetailPage";
 import NewsPage from "./pages/NewsPage";

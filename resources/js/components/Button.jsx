@@ -34,7 +34,7 @@ const Button = ({ children, variant = "primary", className = "", icon, iconRight
             {icon && <span className="flex items-center justify-center">{icon}</span>}
 
             {/* Children */}
-            <span className="flex items-center justify-center gap-1">{children}</span>
+            <span className="flex items-center justify-center gap-2">{children}</span>
 
             {/* Icon Arrow Right */}
             {iconRight && <span>{iconRight}</span>}

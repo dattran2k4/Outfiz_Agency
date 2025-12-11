@@ -4,7 +4,7 @@ const HireHeader = ({ bgImage }) => {
     return (
         <>
             <div className="relative h-[851px] w-full">
-                <div className="absolute w-full h-full -z-999 opacity-100">
+                <div className="absolute inset-0 -z-999">
                     <img src={bgImage} className="w-full h-full object-cover" alt="Outfiz" />
                 </div>
                 <div className="max-w-[1240px] mx-auto h-full">

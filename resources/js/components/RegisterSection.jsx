@@ -2,33 +2,34 @@ import RegisterImg from "../images/register.png";
 import RegisterBg from "../images/register-bg.png";
 import Button from "../components/Button";
 import ContactButton from "./ContactButton";
+import Decor from "./Decor";
 
 const RegisterSection = () => {
     return (
-        <section className="py-16 bg-white overflow-hidden">
+        <section className="py-15 bg-white">
             <div className="max-w-[1240px] mx-auto">
                 <div className="flex gap-10 items-center">
                     {/* Left Col */}
-                    <div className="relative p-8 md:p-8 rounded-[20px] h-[580px] w-[52.4%]">
-                        <img
-                            src={RegisterBg}
-                            alt="Background"
-                            className="absolute rounded-[20px] w-full h-full inset-0 object-cover z-0"
-                        />
+                    <div className="relative rounded-[20px] min-h-[580px] w-[52.4%] flex">
+                        {/* BG IMG */}
+                        <div className="absolute w-full h-full">
+                            <img
+                                src={RegisterBg}
+                                alt="Background"
+                                className="rounded-[20px] w-full h-full object-cover z-0"
+                            />
+                        </div>
 
                         {/* Content */}
-                        <div className="relative">
+                        <div className="z-99 h-ful w-full p-8">
                             <div className="mb-[30px]">
                                 <h2 className="text-[40px] font-bold text-brand mb-3">Đăng Ký Tư Vấn</h2>
 
-                                <div className="flex gap-1">
-                                    <span className="w-5 h-1.5 bg-linear-to-r from-[#FF782E] to-brand rounded-full"></span>
-                                    <span className="w-10 h-1.5 bg-linear-to-r from-[#FF782E] to-brand rounded-full"></span>
-                                </div>
+                                <Decor />
                             </div>
 
                             {/* Form */}
-                            <div className="bg-white rounded-2xl border border-brand px-4 py-6 shadow-lg">
+                            <div className="bg-white rounded-2xl border border-brand px-4 py-6 shadow-lg ">
                                 <form className="space-y-4">
                                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                                         {/* Fullname */}

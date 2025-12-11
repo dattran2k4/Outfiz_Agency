@@ -1,47 +1,51 @@
-import AboutUsImg from '../images/about-us-img.png';
-import Button from './Button';
-import {ArrowRightIcon} from '../components/Icons';
+import AboutUsImg from "../images/about-us-img.png";
+import Button from "./Button";
+import BeautifulGirlImg from "../images/beautiful-girl.png";
+import { ArrowRightIcon } from "../components/Icons";
 
 const AboutSection = () => {
-   return (
-     <div class="relative w-full max-w-[1240px] mx-auto h-[500px] md:h-[565px] group">
-       
-       {/* Image */}
-      <img 
-        src={AboutUsImg} 
-        alt="Background Outfiz" 
-        class="absolute inset-0 w-full h-full object-contain z-0 bg-transparent"
-      />
+    return (
+        <section className="mt-15">
+            <div className="relative max-w-[1240px] mx-auto group flex">
+                {/* Background */}
+                <div className="w-full h-[565px] absolute -z-99">
+                    <img src={AboutUsImg} alt="Background Outfiz" className="w-full h-full object-contain " />
+                </div>
 
+                {/* IMG */}
+                <div className="w-[509px] h-[562px] z-99 relative ml-15">
+                    <img src={BeautifulGirlImg} className="w-full h-full object-cover" alt="" />
+                </div>
 
-    {/* Content */}
-  <div class="absolute z-10 right-0 md:right-[10%] top-[12%] w-full md:max-w-[450px] px-6 md:px-0">
-    
-    <div class="flex flex-col space-y-4">
-      <h2 className="text-center text-[40px] font-bold text-brand">Về chúng tôi</h2>
-      <h3 class="bg-gradient-highlight bg-clip-text text-transparent font-bold text-3xl uppercase tracking-wide mt-15">
-        Outfiz Agency
-      </h3>
+                {/* Content */}
+                <div className="z-99 relative max-w-[550px] mt-[76px] ml-15 mr-15">
+                    <div className="flex flex-col">
+                        <h2 className="text-center text-[40px] text-brand font-bold ">Về chúng tôi</h2>
+                        <h3 className="text-linear font-bold text-3xl uppercase tracking-wide mt-[83.5px]">
+                            Outfiz Agency
+                        </h3>
 
-      <p class="text-[#404040] leading-tight text-justify text-lg">
-        Là agency tại Đà Nẵng chuyên sâu về Digital Marketing, quy tụ đội ngũ giàu kinh nghiệm, trẻ trung và đầy nhiệt huyết.
-        Chúng tôi mang đến giải pháp marketing tổng thể – từ tư vấn chiến lược đến triển khai thực tế, tối ưu đa kênh và bám sát mục tiêu kinh doanh. Với mỗi ngân sách, OUTFIZ cam kết tạo ra hiệu quả tương xứng, giúp doanh nghiệp tăng trưởng bền vững và nổi bật trên thị trường.
-      </p>
+                        <p className="text-[#404040] leading-[4/3] text-justify text-lg mt-4">
+                            Là agency tại Đà Nẵng chuyên sâu về Digital Marketing, quy tụ đội ngũ giàu kinh nghiệm, trẻ
+                            trung và đầy nhiệt huyết. Chúng tôi mang đến giải pháp marketing tổng thể – từ tư vấn chiến
+                            lược đến triển khai thực tế, tối ưu đa kênh và bám sát mục tiêu kinh doanh. Với mỗi ngân
+                            sách, OUTFIZ cam kết tạo ra hiệu quả tương xứng, giúp doanh nghiệp tăng trưởng bền vững và
+                            nổi bật trên thị trường.
+                        </p>
 
-      <div>
-        <a href="#">
-          <Button variant="outline" className="w-[186px]">
-            Tìm hiểu thêm
-            <ArrowRightIcon />
-          </Button>
-        </a>
-      </div>
-
-    </div>
-  </div>
-
-</div>
-   )
-}
+                        <div className="mt-8">
+                            <a href="#">
+                                <Button variant="outline" className="w-[186px]">
+                                    Tìm hiểu thêm
+                                    <ArrowRightIcon />
+                                </Button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    );
+};
 
 export default AboutSection;

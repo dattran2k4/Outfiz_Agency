@@ -1,6 +1,6 @@
 const NewsHeader = ({ bgImage }) => {
     return (
-        <div className="w-full h-[403px] relative flex justify-center">
+        <div className="w-full h-[331px] relative flex justify-center">
             <div className="absolute -z-10 h-full w-full">
                 <img src={bgImage} className="w-full h-full object-cover object-center" alt="Outfiz" />
             </div>

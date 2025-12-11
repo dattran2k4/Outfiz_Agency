@@ -32,7 +32,7 @@ const ProjectSection = ({ itemsPerPage, isHomePage, data }) => {
     if (!data || data.length === 0) return null;
 
     return (
-        <section className="py-16 bg-white">
+        <section className="py-15 bg-white">
             <div className="max-w-[1240px] mx-auto flex flex-col items-center">
                 {/* --- Phần Tiêu đề --- */}
                 {isHomePage && (
