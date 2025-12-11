@@ -1,18 +1,18 @@
-import HomePage from "./pages/HomePage";
-import { serviceData } from "./data/service";
-import MainLayout from "./layouts/MainLayout";
+import HomePage from "./pages/HomePage.jsx";
+import { serviceData } from "./data/service.js";
+import MainLayout from "./layouts/MainLayout.jsx";
 import "../css/app.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import ServiceDetailPage from "./pages/ServiceDetailPage";
-import ProjectPage from "./pages/ProjectPage";
+import ServiceDetailPage from "./pages/ServiceDetailPage.jsx";
+import ProjectPage from "./pages/ProjectPage.jsx";
 import bgImg from "./images/background.png";
-import { projectData } from "./data/project";
-import ProjectDetailPage from "./pages/ProjectDetailPage";
-import NewsPage from "./pages/NewsPage";
-import NewsDetailPage from "./pages/NewsDetailPage";
-import HirePage from "./pages/HirePage";
-import HireDetailPage from "./pages/HireDetailPage";
-import ApplyPage from "./pages/ApplyPage";
+import { projectData } from "./data/project.js";
+import ProjectDetailPage from "./pages/ProjectDetailPage.jsx";
+import NewsPage from "./pages/NewsPage.jsx";
+import NewsDetailPage from "./pages/NewsDetailPage.jsx";
+import HirePage from "./pages/HirePage.jsx";
+import HireDetailPage from "./pages/HireDetailPage.jsx";
+import ApplyPage from "./pages/ApplyPage.jsx";
 
 const router = createBrowserRouter([
     {
