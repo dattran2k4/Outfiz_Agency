@@ -1,4 +1,4 @@
-const ApplyHeader = ({ bgImage }) => {
+const ApplyHeader = ({ bgImage = ""}) => {
     return (
         <>
             <div className="w-full h-[355px] relative flex justify-center">

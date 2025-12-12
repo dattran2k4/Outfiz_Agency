@@ -1,5 +1,10 @@
+import type { Service } from "../types";
 import Button from "./Button";
-const ServiceHero = ({ data, bgImage }) => {
+interface ServiceHeroProps {
+  data: Service;
+  bgImage?: string;   
+}
+const ServiceHero = ({ data, bgImage} : ServiceHeroProps) => {
     return (
         <section className="relative w-full">
             <div className="z-10 w-full flex max-w-[1240px] mx-auto items-center pt-28 justify-between gap-x-15">

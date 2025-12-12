@@ -1,5 +1,6 @@
 import { featureData } from "../data/feature";
 import FeatureBgImage from "../images/feature/feature-background.png";
+import type { FeatureCard } from "../types";
 import Decor from "./Decor";
 
 const FeatureSection = () => {
@@ -19,15 +20,15 @@ const FeatureSection = () => {
                                 {/* Col 1: Card 1, 3 */}
                                 <div className="flex flex-col gap-[180px] ml-5">
                                     {/* Card 1 */}
-                                    <FeatureCard item={featureData[0]} />
+                                    <FeatureCard item={featureData[0]!}  />
 
                                     {/* Card 3 */}
-                                    <FeatureCard item={featureData[2]} />
+                                    <FeatureCard item={featureData[2]!} />
                                 </div>
 
                                 {/* Col 2: Card 2 + Stats*/}
                                 <div className="flex flex-col justify-end gap-y-16 ml-15 w-fit">
-                                    <FeatureCard item={featureData[1]} />
+                                    <FeatureCard item={featureData[1]!} />
                                     {/* Khối thống kê: 30+ Dự án */}
                                     <div className="inline-flex gap-3 items-center bg-brand text-white rounded-[20px] px-6 py-[39px] shadow-xl hover:shadow-orange-200/50 hover:-translate-y-1 transition-all duration-300">
                                         <span className="text-4xl md:text-6xl font-bold">30+</span>
@@ -63,7 +64,10 @@ const FeatureSection = () => {
     );
 };
 
-const FeatureCard = ({ item }) => {
+const FeatureCard = ({ item } : FeatureCard) => {
+
+    const {image, title, description} = item;
+    
     return (
         <div className="relative group w-[338px]">
             <div className="absolute top-0 left-0 w-[95%] h-[95%] bg-[#FFAD2C] rounded-[20px] transform rotate-15 transition-all duration-300 -z-10 opacity-80"></div>
@@ -74,17 +78,17 @@ const FeatureCard = ({ item }) => {
                 {/* Image Icon */}
                 <div className="absolute w-[120px] h-[175px] -top-[45%] bg-transparent flex items-center justify-center mx-auto">
                     <img
-                        src={item.image}
-                        alt={item.title}
+                        src={image}
+                        alt={title}
                         className="w-full h-full object-contain transform group-hover:scale-110 transition-transform duration-300"
                     />
                 </div>
 
                 <h3 className="text-2xl font-bold text[#404040] mb-3 px-2 group-hover:text-brand transition-colors">
-                    {item.title}
+                    {title}
                 </h3>
 
-                <p className="text-[#404040] leading-snug">{item.description}</p>
+                <p className="text-[#404040] leading-snug">{description}</p>
             </article>
         </div>
     );

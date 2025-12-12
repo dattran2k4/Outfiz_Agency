@@ -4,14 +4,14 @@ import NewsSection from "../components/NewsSection";
 import HireSection from "../components/HireSection";
 import RegisterSection from "../components/RegisterSection";
 
-const NewsDetailPage = ({ bgImage }) => {
+const NewsDetailPage = ({ bgImage = ""}) => {
     //TO-DO useParam to get slug
 
     return (
         <>
             <NewsDetailHeader bgImage={bgImage} />
             <NewsArticle />
-            <NewsSection isHomePage={true} />
+            <NewsSection isHomePage={true} itemsPerPage={3} />
             <HireSection />
             <RegisterSection />
         </>

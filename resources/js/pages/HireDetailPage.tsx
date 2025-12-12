@@ -4,7 +4,7 @@ import { hiringJobs } from "../data/hire";
 import HireNewsSection from "../components/HireNewsSection";
 import RegisterSection from "../components/RegisterSection";
 
-const HireDetailPage = ({ bgImage }) => {
+const HireDetailPage = ({ bgImage = "" }) => {
     return (
         <>
             <HireDetailHeader bgImage={bgImage} />

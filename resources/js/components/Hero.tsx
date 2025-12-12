@@ -1,8 +1,9 @@
 import Button from "./Button";
 import { CallingIcon, ZaloIcon, MessengerIcon } from "./Icons";
 import HeroImage from "../images/hero-img.png";
+import type { ReactNode } from "react";
 
-const ActionButton = ({ icon, href }) => {
+const ActionButton = ({ icon, href} : {icon : ReactNode, href : string}) => {
     return (
         <div className="w-15 h-15 flex items-center justify-center border border-[#FFC2C2] rounded-full">
             <a

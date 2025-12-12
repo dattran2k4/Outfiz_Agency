@@ -1,4 +1,8 @@
-const Decor = ({ className }) => {
+interface DecorProp {
+    className?: string;
+}
+
+const Decor = ({ className = "" } : DecorProp) => {
     return (
         <div className={`flex gap-1 ${className}`}>
             <span className="w-5 h-1.5 bg-linear-to-r from-[#FF782E] to-brand rounded-full"></span>

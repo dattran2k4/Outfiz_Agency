@@ -2,7 +2,7 @@ import ApplyHeader from "../components/ApplyHeader";
 import RegisterForm from "../components/RegisterForm";
 import HireNewsSection from "../components/HireNewsSection";
 import RegisterSection from "../components/RegisterSection";
-const ApplyPage = ({ bgImage }) => {
+const ApplyPage = ({ bgImage = ""}) => {
     return (
         <>
             <ApplyHeader bgImage={bgImage} />

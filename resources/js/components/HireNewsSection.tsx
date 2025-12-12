@@ -6,7 +6,7 @@ import Decor from "./Decor";
 import Button from "./Button";
 import { ArrowRightIcon } from "./Icons";
 
-const HireNewsSection = ({ itemsPerPage = 6, heading, isPaginate = true }) => {
+const HireNewsSection = ({ itemsPerPage = 6, heading = null, isPaginate = true }) => {
     const { currentPage, totalPages, currentData, handlePageChange } = usePagination({
         data: hiringJobs,
         itemsPerPage: itemsPerPage,

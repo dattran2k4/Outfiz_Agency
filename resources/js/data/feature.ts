@@ -1,8 +1,9 @@
 import targetImg from '../images/feature/feature-target.png';
 import socialImg from '../images/feature/feature-social.png';
 import staffImg from '../images/feature/feature-staff.png';
+import type { Feature } from '../types';
 
-export const featureData = [
+export const featureData: Feature[] = [
     {
     id: 1,
     title: "Chiến lược rõ ràng – Triển khai hiệu quả",

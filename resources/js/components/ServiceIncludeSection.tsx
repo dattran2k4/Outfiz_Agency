@@ -1,6 +1,11 @@
 import Decor from "../components/Decor";
+import type { ServiceInclude } from "../types";
 
-const ServiceIncludeSection = ({ includes }) => {
+interface ServiceIncludeSectionProps {
+  includes: ServiceInclude[];
+}
+
+const ServiceIncludeSection = ({ includes } : ServiceIncludeSectionProps) => {
     if (!includes || includes.length === 0) return null;
 
     return (
@@ -17,21 +22,21 @@ const ServiceIncludeSection = ({ includes }) => {
 
                 {/* 2. Grid Cards */}
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    {includes.map((item, index) => (
+                    {includes.map(({ title, icon, description }: ServiceInclude, index : number) => (
                         <div
                             key={index}
                             className="bg-white border-t-[5px] border-brand  rounded-2xl p-8 shadow-[0_4px_20px_rgba(0,0,0,0.05)] borderhover:shadow-xltransition-all duration-300 group flex flex-col items-center text-center h-full"
                         >
                             {/* Icon Container */}
                             <div className="w-20 h-20 mb-2.5 flex items-center justify-center transition-transform duration-300 group-hover:scale-110">
-                                <img src={item.icon} alt={item.title} className="w-full h-full object-cover" />
+                                <img src={icon} alt={title} className="w-full h-full object-cover" />
                             </div>
 
                             {/* Title */}
-                            <h3 className="text-2xl font-semibold text-brand mb-2.5">{item.title}</h3>
+                            <h3 className="text-2xl font-semibold text-brand mb-2.5">{title}</h3>
 
                             {/* Description */}
-                            <p className="text-[#404040] leading-[22/16] text-sm text-center">{item.description}</p>
+                            <p className="text-[#404040] leading-[22/16] text-sm text-center">{description}</p>
                         </div>
                     ))}
                 </div>

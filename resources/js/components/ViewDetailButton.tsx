@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { ArrowRightIcon } from "./Icons";
 import Button from "./Button";
 
-const ViewDetailButton = ({ href }) => {
+const ViewDetailButton = ({ href = "" }) => {
     return (
         <>
             <Link to={href}>

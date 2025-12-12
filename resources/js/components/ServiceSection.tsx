@@ -2,6 +2,7 @@ import { serviceData } from "../data/service";
 import Button from "../components/Button";
 import { ArrowRightIcon } from "../components/Icons";
 import { Link } from "react-router-dom";
+import type { ServiceCard } from "../types";
 const ServiceSection = () => {
     return (
         <section className="py-15 bg-transparent">
@@ -39,7 +40,7 @@ const ServiceSection = () => {
     );
 };
 
-const ServiceCard = ({ data }) => {
+const ServiceCard = ({ data: {image, title, description, link} }: ServiceCard) => {
     return (
         <article
             className="bg-white rounded-[15px] p-6 shadow-lg hover:shadow-2xl transition-all 
@@ -47,15 +48,15 @@ const ServiceCard = ({ data }) => {
         >
             {/* Image */}
             <div className="w-[150px] h-[100px] flex items-center justify-center">
-                <img src={data.image} alt={data.title} className="w-full h-full object-cover" />
+                <img src={image} alt={title} className="w-full h-full object-cover" />
             </div>
             {/* Title */}
-            <h3 className="text-3xl  text-[#404040] font-bold mt-8">{data.title}</h3>
+            <h3 className="text-3xl  text-[#404040] font-bold mt-8">{title}</h3>
             {/* Description */}
-            <p className="text-lg text-[#404040] mt-5 leading-[4/3] line-clamp-1">{data.description}</p>
+            <p className="text-lg text-[#404040] mt-5 leading-[4/3] line-clamp-1">{description}</p>
             {/* Button */}
             <div className="mt-7">
-                <Link to={`${data.link}`} className="mx-auto inline-flex items-center justify-center">
+                <Link to={`${link}`} className="mx-auto inline-flex items-center justify-center">
                     <Button className="h-[42px]! w-[167px]!" variant="outline">
                         Xem thêm
                         <ArrowRightIcon />

@@ -9,7 +9,7 @@ import { serviceData } from "../data/service";
 import { useLocation } from "react-router-dom";
 import { useEffect } from "react";
 
-const ServiceDetailPage = ({ bgImage }) => {
+const ServiceDetailPage = ({ bgImage = ""}) => {
     const location = useLocation();
 
     //Get URL
@@ -17,6 +17,8 @@ const ServiceDetailPage = ({ bgImage }) => {
 
     // 2. Tìm dữ liệu tương ứng trong serviceData
     const service = serviceData.find((item) => item.link === currentURL);
+
+    if (!service) return <div>Chưa có dịch vụ</div>;
 
     // 3. Scroll lên đầu trang khi chuyển route
     useEffect(() => {
@@ -31,7 +33,7 @@ const ServiceDetailPage = ({ bgImage }) => {
             <ServiceProjectSection />
             <RegisterSection />
             <ServiceFAQSection />
-            <NewsSection />
+            <NewsSection isHomePage={false} itemsPerPage={3}/>
         </>
     );
 };

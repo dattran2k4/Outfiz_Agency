@@ -126,7 +126,7 @@ export const ArrowRightIcon = ({ className = "w-5 h-5" }) => (
     </svg>
 );
 
-export const ArrowRight = ({ className }) => (
+export const ArrowRight = ({ className = "" }) => (
     <svg className={className} width="9" height="15" viewBox="0 0 9 15" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path
             d="M1.24583 14.2625C0.929166 14.2625 0.6125 14.1458 0.3625 13.8958C-0.120833 13.4125 -0.120833 12.6125 0.3625 12.1292L5.3625 7.12917L0.3625 2.12917C-0.120833 1.64583 -0.120833 0.845833 0.3625 0.3625C0.845833 -0.120833 1.64583 -0.120833 2.12917 0.3625L8.0125 6.24583C8.49583 6.72917 8.49583 7.52917 8.0125 8.0125L2.12917 13.8958C1.87917 14.1458 1.5625 14.2625 1.24583 14.2625Z"
@@ -135,7 +135,7 @@ export const ArrowRight = ({ className }) => (
     </svg>
 );
 
-export const ArrowLeft = ({ className }) => (
+export const ArrowLeft = ({ className = "" }) => (
     <svg className={className} width="9" height="15" viewBox="0 0 9 15" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path
             d="M7.12917 14.2625C6.8125 14.2625 6.49583 14.1458 6.24583 13.8958L0.3625 8.0125C-0.120833 7.52917 -0.120833 6.72917 0.3625 6.24583L6.24583 0.3625C6.72917 -0.120833 7.52917 -0.120833 8.0125 0.3625C8.49583 0.845833 8.49583 1.64583 8.0125 2.12917L3.0125 7.12917L8.0125 12.1292C8.49583 12.6125 8.49583 13.4125 8.0125 13.8958C7.77917 14.1458 7.4625 14.2625 7.12917 14.2625Z"
@@ -144,7 +144,7 @@ export const ArrowLeft = ({ className }) => (
     </svg>
 );
 
-export const StarIcon = ({ filled }) => (
+export const StarIcon = ({ filled = false }) => (
     <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path
             d="M4.08326 18C4.29714 18 4.50996 17.9314 4.69314 17.7947L8.99989 14.5662L13.3066 17.7947C13.4851 17.9289 13.6995 18.0007 13.9193 17.9999C14.1391 17.9991 14.3531 17.9257 14.5306 17.7903C14.7083 17.6556 14.8409 17.4657 14.9094 17.2478C14.978 17.0298 14.979 16.7948 14.9123 16.5761L13.3061 11.1573L17.5742 8.01354C17.7511 7.87708 17.8825 7.68595 17.9497 7.46717C18.017 7.24839 18.0168 7.01305 17.949 6.79442C17.8808 6.57633 17.7487 6.38617 17.5714 6.25082C17.3942 6.11547 17.1807 6.04178 16.9612 6.04015L11.675 6.03185L9.992 0.74754C9.92255 0.529851 9.78934 0.340519 9.61123 0.206356C9.43313 0.0721933 9.21916 0 8.99963 0C8.78009 0 8.56612 0.0721933 8.38802 0.206356C8.20991 0.340519 8.0767 0.529851 8.00725 0.74754L6.35284 6.03185L1.03968 6.04015C0.819902 6.04145 0.606102 6.11511 0.428654 6.25066C0.251207 6.38621 0.119135 6.57677 0.0512009 6.79525C-0.0167332 7.01374 -0.0170765 7.24905 0.0502224 7.46775C0.117523 7.68645 0.249043 7.87742 0.426096 8.01354L4.6942 11.1573L3.08797 16.5761C3.0212 16.7947 3.0221 17.0297 3.09053 17.2477C3.15897 17.4657 3.29146 17.6556 3.46914 17.7903C3.64723 17.9268 3.8624 18.0003 4.08326 18Z"
@@ -153,7 +153,7 @@ export const StarIcon = ({ filled }) => (
     </svg>
 );
 
-export const ArrowUpIcon = ({ className }) => (
+export const ArrowUpIcon = ({ className = ""}) => (
     <svg
         className={className}
         width="40"
@@ -173,7 +173,7 @@ export const ArrowUpIcon = ({ className }) => (
     </svg>
 );
 
-export const MailIcon = ({ className }) => (
+export const MailIcon = ({ className = ""}) => (
     <svg
         className={className}
         width="24"
@@ -189,7 +189,7 @@ export const MailIcon = ({ className }) => (
     </svg>
 );
 
-export const GPSIcon = ({ className }) => (
+export const GPSIcon = ({ className = ""}) => (
     <svg
         className={className}
         width="24"
@@ -207,7 +207,7 @@ export const GPSIcon = ({ className }) => (
     </svg>
 );
 
-export const FacebookIcon = ({ className }) => (
+export const FacebookIcon = ({ className  = ""}) => (
     <svg
         className={className}
         width="24"
@@ -223,7 +223,7 @@ export const FacebookIcon = ({ className }) => (
     </svg>
 );
 
-export const InstagramIcon = ({ className }) => (
+export const InstagramIcon = ({ className = ""}) => (
     <svg
         className={className}
         width="24"
@@ -243,7 +243,7 @@ export const InstagramIcon = ({ className }) => (
     </svg>
 );
 
-export const TiktokIcon = ({ className }) => (
+export const TiktokIcon = ({ className = "" }) => (
     <svg
         className={className}
         width="24"

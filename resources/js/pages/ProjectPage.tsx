@@ -8,7 +8,7 @@ import NewsSection from "../components/NewsSection";
 import { useState } from "react";
 import ServiceCategories from "../components/ServiceCategories";
 
-const ProjectPage = ({ bgImage }) => {
+const ProjectPage = ({ bgImage }: {bgImage: String}) => {
     const [activeFilter, setActiveFilter] = useState("all");
 
     const serviceCategories = [
@@ -32,7 +32,7 @@ const ProjectPage = ({ bgImage }) => {
             <ProjectSection isHomePage={false} itemsPerPage={9} data={filteredProjects} />
             <FeedBackSection />
             <RegisterSection />
-            <NewsSection />
+            <NewsSection isHomePage={true} itemsPerPage={3} />
         </>
     );
 };

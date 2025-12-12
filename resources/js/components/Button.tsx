@@ -1,6 +1,17 @@
-import React from "react";
+import type { ButtonHTMLAttributes, ReactNode } from "react";
 
-const Button = ({ children, variant = "primary", className = "", icon, iconRight, ...props }) => {
+type ButtonVariant = "primary" | "outline" | "gradient";
+
+interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+    children: ReactNode;
+    variant?: ButtonVariant;
+    icon?: ReactNode;
+    iconRight? : ReactNode;
+    className?: string;
+}
+
+
+const Button = ({ children, variant = "primary", className = "", icon, iconRight, ...props } : ButtonProps) => {
     const baseStyles =
         "flex items-center justify-center gap-[4px] rounded-[30px] transition-all duration-300 pt-[10px] pb-[10px] px-[16px] cursor-pointer";
 

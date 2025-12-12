@@ -1,12 +1,11 @@
 import HomePage from "./pages/HomePage.jsx";
-import { serviceData } from "./data/service.js";
+import { serviceData } from "./data/service";
 import MainLayout from "./layouts/MainLayout.jsx";
 import "../css/app.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import ServiceDetailPage from "./pages/ServiceDetailPage.jsx";
 import ProjectPage from "./pages/ProjectPage.jsx";
 import bgImg from "./images/background.png";
-import { projectData } from "./data/project.js";
 import ProjectDetailPage from "./pages/ProjectDetailPage.jsx";
 import NewsPage from "./pages/NewsPage.jsx";
 import NewsDetailPage from "./pages/NewsDetailPage.jsx";

@@ -2,7 +2,6 @@ import { ArrowLeft, ArrowRight, ArrowRightIcon } from "../components/Icons";
 import Button from "../components/Button";
 import NavButton from "../components/NavButton";
 import ProjectCard from "./ProjectCard";
-import { useState, useEffect } from "react";
 import Pagination from "./Pagination";
 import { usePagination } from "./usePagination";
 import { Link } from "react-router-dom";

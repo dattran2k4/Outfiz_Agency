@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { FileIcon } from "./Icons";
 import Button from "./Button";
 import checkBoxImg from "../images/check-box.png";
-const RegisterForm = ({ image }) => {
+const RegisterForm = () => {
     // 1. State lưu trữ dữ liệu form
     const [formData, setFormData] = useState({
         fullName: "",
@@ -14,7 +14,7 @@ const RegisterForm = ({ image }) => {
     const [isSubmitting, setIsSubmitting] = useState(false);
 
     // 2. Xử lý khi nhập liệu
-    const handleChange = (e) => {
+    const handleChange = (e : React.ChangeEvent<HTMLInputElement>) => {
         const { name, value } = e.target;
         setFormData({
             ...formData,
@@ -23,7 +23,7 @@ const RegisterForm = ({ image }) => {
     };
 
     // 3. Xử lý khi bấm Gửi
-    const handleSubmit = (e) => {
+    const handleSubmit = (e : React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         setIsSubmitting(true);
 

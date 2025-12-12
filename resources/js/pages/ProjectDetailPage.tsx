@@ -11,10 +11,14 @@ import ProjectDetailReview from "../components/ProjectDetailReview";
 import RegisterSection from "../components/RegisterSection";
 import ProjectSection from "../components/ProjectSection";
 
-const ProjectDetailPage = ({ bgImage }) => {
+const ProjectDetailPage = ({ bgImage = "" }) => {
     const { slug } = useParams();
 
     const project = projectData.find((p) => p.slug === slug);
+
+    if (!project) {
+        return <div className="text-center py-20">Không tìm thấy dự án</div>;
+    }
 
     useEffect(() => {
         window.scrollTo(0, 0);

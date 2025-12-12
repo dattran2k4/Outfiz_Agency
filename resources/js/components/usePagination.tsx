@@ -9,7 +9,7 @@ export const usePagination = ({ data = [], itemsPerPage = 3 }) => {
 
     const currentData = data.slice(startIndex, startIndex + itemsPerPage);
 
-    const handlePageChange = (pageNumber) => {
+    const handlePageChange = (pageNumber : number) => {
         setCurrentPage(pageNumber);
     };
 

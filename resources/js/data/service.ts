@@ -20,11 +20,9 @@ import seoTotalIcon from '../images/icons/seo-total.svg';
 import eCommerceIcon from '../images/icons/e-commerce.svg';
 import googleNotiIcon from '../images/icons/google-noti.svg';
 
+import type {Service} from '../types/index';
 
-
-
-
-export const serviceData = [
+export const serviceData: Service[] = [
     {
     id: 1,
     title: "Quản trị & chăm sóc Social",
@@ -34,7 +32,6 @@ export const serviceData = [
     link: "quan-tri-cham-soc-social",
     includes: [
             {
-              
                 title: "Fanpage",
                 icon: fbIcon,
                 description: "Quản trị Fanpage chuyên nghiệp với quy trình bài bản: từ lập kế hoạch nội dung, thiết kế hình ảnh nhận diện, đến quản lý tương tác và đo lường hiệu quả."

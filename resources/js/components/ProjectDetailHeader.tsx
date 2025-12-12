@@ -1,4 +1,4 @@
-const ProjectDetailHeader = ({ bgImg, projectName, projectImg }) => {
+const ProjectDetailHeader = ({ bgImg = "", projectName = "", projectImg = ""}) => {
     return (
         <>
             <div className="relative h-[669px]">
